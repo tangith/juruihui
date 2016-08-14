@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+			/*详情门票切换颜色设置*/
+			.mui-segmented-control{
+				border: 1px solid #EB8256 !important;
+			}
+			.mui-segmented-control .mui-control-item.mui-active{
+				background-color: #EB8256 !important;
+				color: #fff !important;
+			}
+			.mui-segmented-control .mui-control-item{
+				border-color: #EB8256 !important;
+				border-left: 1px solid #EB8256 !important;
+			}
+			.mui-segmented-control a{
+				color: #EB8256 !important;
+			}
+			
+			.mui-content{
+				width: 96%;
+				margin: 0 auto;
+			}
+			.activity_pic{
+				background: url(../images/cbd.jpg) center no-repeat;
+				background-size: 100%;
+				height: 250px;
+				width: 100%;
+			}
+			.list_collect{
+				width: 40px;
+				height: 40px;
+				float: right;
+
+			}
+			.list_collect .collect_num{
+				text-align: center;
+				display: block;
+			}
+			.list_collect img{
+				width: 30px;
+				height: 30px;
+				margin: 0 auto;
+				display: block;
+			}
+			.list_info{
+				float: left;
+				color: #fff;
+				font-size: 12px;
+				text-align: center;
+				line-height: 20px;
+				position: relative;
+				top: 220px;
+				left: 5px;
+			}
+			.list_info .list_info_tag{
+				display: inline-block;
+				width: 80px;
+				height: 20px;
+				background-color: #EB8256;
+				border-radius: 2px;
+			}
+			.list_apply{
+				width: 50px;
+				height: 20px;
+				text-align: right;
+				line-height: 20px;
+				font-size: 12px;
+				background-image: url(../images/list_apply.png);
+				background-size: 100%;
+				position: absolute;
+				right: 0px;
+				top: 260px;
+			}
+			.list_apply span{
+				margin-right: 3px;
+			}
+			.activity_info{
+				margin-top: 5px;
+			}
+			.activity_info p{
+				margin-bottom: 5px;
+				color: #000;
+			}
+			.activity_info img{
+				width: 20px;
+				height: 20px;
+				position: relative;
+				bottom: -5px;
+			}
+			.activity_erweima{
+				width: 190px;
+				text-align: center;
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+			}
+			.activity_erweima .erweima_left{
+				float: left;
+			}
+			.activity_erweima .erweima_right{
+				float: right;
+			}
+			.activity_item1 h4,.activity_item2 h4{
+				color: #EB8256;
+			}
+			.activity_item1 hr,.activity_item2 hr{
+				background-color: #EB8256;
+				border: none;
+				height: 2px;
+			}
+			.activity_item1 p,.activity_item2 p{
+				color: #000;
+			}
+		/*票*/
+			.ticket{
+				width: 300px;
+				height: 150px;
+				margin: 0 auto;
+				background: url(../images/ticket.png) no-repeat center;
+				background-size: 100%;
+			}
+			.ticket_checked{
+				background: url(../images/ticket_checked.png) no-repeat center !important;
+				background-size: 100% !important;
+			}
+			.ticket .free{
+				color: #fff;
+				position: relative;
+				top: 65px;
+				left: 45px;
+			}
+			.ticket .ticket_num{
+				color: #929292;
+				padding-left: 135px;
+			}
+			.ticket p{
+				padding-left: 135px;
+				margin-top: 20px;
+			}
+		/*票end*/
+		
+			.joinde{
+				width: 100%;
+				border: 2px solid #EB8256;
+				padding: 8px;
+				height: 110px;
+				overflow: hidden;
+				position: relative;
+				margin-bottom: 50px;
+			}
+			.joinde img{
+				width: 50px;
+				margin: 9px;
+			}
+			.joinde_more{
+				display: block;
+				width: 20px;
+				height: 20px;
+				background-image: url(../images/joined_more.png);
+				background-size: 100%;
+				position: absolute;
+				right: 0px;
+				bottom: 20px;
+			}
+			.buttons{
+				padding-top: 10px;
+				height: 40px;
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+				background-color: #EFEFF4;
+				padding-bottom: 40px;
+			}
+			.buttons a{
+				display: inline-block;
+				height: 30px;
+				background-color: #B1B1B1;
+				text-align: center;
+				border-radius: 6px;
+				line-height: 30px;
+				color: #fff;
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			.buttons .ijoin{
+				background-color: #EB8256;
+				width: 46%;
+			}
+			.buttons .share,.buttons .ta_homepage{
+				width: 20%;
+			}
+			.list_apply span,.list_collect span{
+				color: #fff;
+			}
+			.host{
+				width: 100%;
+				height: 50px;
+				position: relative;
+				box-shadow: 0px 0px 5px #EB8256;
+				border-radius: 3px;
+			}
+			.host .host_img{
+				width: 40px;
+				border-radius: 100%;
+				position: absolute;
+				top: 6px;
+				left: 6px;
+				border: 1px solid #CCCCCC;
+			}
+			.host a{
+				display: block;
+				width: 80px;
+				height: 25px;
+				background-color: #EB8256;
+				border-radius: 3px;
+				color: #fff;
+				font-size: 12px;
+				line-height: 25px;
+				text-align: center;
+				position: absolute;
+				right: 5px;
+				top: 13px;
+			}
+			.host h6{
+				font-size: 18px;
+				font-weight: bold;
+				color: #EB8256;
+				position: absolute;
+				left: 60px;
+				top: 12px;
+			}
+			.mui-content{
+				/*background-color: #fff;*/
+			}
+			
+		/*模态窗*/
+			.mui-modal{
+				left: 0px;
+			}
+			
+			#baoming .mui-content{
+				width: 95%;
+				margin: 0 auto;
+				background-color: #fff;
+			}
+			/*完善报名信息*/
+			#baoming .title{
+				width: 100%;
+				text-align: center;
+				padding-bottom: 5px;
+			}
+			#baoming .title .line{
+				display: inline-block;
+				width: 30%;
+				height: 1px;
+				background-color: #222;
+				border: none;
+				position: relative;
+				top: -6px;
+			}
+			
+			/*按钮*/
+			#baoming .jion_buttons{
+				width: 100%;
+				text-align: center;
+			}
+			#baoming .jion_buttons a {
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				background-color: #EB8256;
+				border-radius: 3px;
+				color: #FFF;
+				line-height: 30px;
+				margin: 10px;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left" href="javascript:back();"></a>
+			<h1 class="mui-title">第十七届中国北京动漫游戏嘉年华</h1>
+		</header>
+		<div class="mui-content">
+			<div class="activity_pic">
+				<div class="list_collect">
+						<img src="../images/collect.png"/>
+						<span class="collect_num">
+							1
+						</span>
+				</div>
+				<div class="list_info">
+						<span class="list_info_tag">游戏&赛事</span>
+						<span class="list_scan">浏览<span class="list_scan_num">4</span></span>
+				</div>
+				<div class="list_apply">
+						<span>
+							可报名
+						</span>
+				</div>
+			</div>
+			<div class="activity_info">
+					<p><img src="../images/timeicon.png"/>2016/08/23-06-24</p>
+					<p><img src="../images/dingweiicon.png"/>朝阳区 天辰东路7号国家会议中心-<span>1.1km</span></p>
+		
+			</div>
+			<div class="host">
+				<img class="host_img" src="../images/ang.jpg"/>
+				<h6>聆心园</h6>
+				<a>关注TA</a>
+			</div>
+			<div style="padding: 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1">
+				活动详情
+			</a>
+					<a class="mui-control-item" href="#item2">
+				活动门票
+			</a>
+				</div>
+			</div>
+			<div>
+			<div id="item1" class="mui-control-content mui-active">
+				<div class="activity_item1">
+					<h4>活动通知</h4>
+					<hr />
+					<p>第四届CPRJ塑料包装技术论坛暨展示会</p>
+					<p>日期：2016年8月4-5日</p>
+					<p>地点：中国上海</p>
+					<p>主题：塑包在行动 创新·高效·环保</p>
+					<p>议题：</p>
+					<p>1.创新功能塑料包装材料</p>
+					<p>2.高效创新包装工艺与自动化</p>
+					<p>3.安全、环保、绿色塑料袋包装</p>
+					<h4>活动日程</h4>
+					<hr />
+					<p>8月4日（全天）</p>
+					<p>主题演讲及展示会</p>
+					<p>互动交流晚宴</p>
+					<p>8月5日（全天）</p>
+					<p>圆桌讨论/参观工厂（待定）</p>
+					<p>详细日程请<a>点击下载</a></p>
+					<h4>活动嘉宾</h4>
+					<hr />
+					<p>丁少辉</p>
+					<p>中国食品和包装机械工业协会副秘书长</p>
+					<p>元洪强</p>
+					<p>中粮包装投资有限公司塑胶事业部总经理</p>
+					<p>陈寿</p>
+					<p>深圳市通产丽星股份有限公司副董事长</p>
+					<p>沈弘</p>
+					<p>强生（中国）投资有限公司亚太包装开发总监</p>
+					<p>梁颖思</p>
+					<p>阿蓓亚中国区市场部经理</p>
+					<p>卢立新</p>
+					<p>江南大学机械工程学院院长</p>
+					<p>印雄飞</p>
+					<p>杭州娃哈哈集团有限公司模具与包装研究所所长</p>
+					<p>Max Loh</p>
+					<p>普派（苏州）包装有限公司亚太区销售总监</p>
+					<p>宋丽君</p>
+					<p>伊利集团技术中心包装经理</p>
+					<p>高虎</p>
+					<p>惠州宝柏包装有限公司产品开发副经理</p>
+					<h4>联系方式</h4>
+					<hr />
+					<p>想在第一时间掌握活动动向？想随时了解各赛区的即时资讯？</p>
+					<p>请随时关注官方微信所发布的讯息</p>
+					<div class="activity_erweima">
+						<div class="erweima_left">
+							<img src="../images/qr-weixin-sm.png"/>
+							<P>活动微信群</p>
+						</div>
+						<div class="erweima_right">
+							<img src="../images/qr-weixin-sm.png"/>
+							<P>活动商公众号</p>
+						</div>
+					</div>
+					<p>联系人：<span></span></p>
+					<p>联系电话：<span></span></p>
+					<p>QQ：<span></span></p>
+					<p>QQ群：<span></span></p>
+					<p>邮箱：<span></span></p>
+					
+				</div>
+			</div>
+			<div id="item2" class="mui-control-content">
+				<div class="activity_item2">
+					<h4>活动通知</h4>
+					<hr />
+					<p>目标听众：</p>
+					<p>包装、食品饮料、日化品和化妆品等企业</p>
+					<div class="ticket">
+						<span class="free">免费</span>
+						<p>VIP票（展位、晚宴、住宿）980元</p>
+						<span class="ticket_num">剩余：104</span>
+					</div>
+					<div class="ticket">
+						<span class="free">免费</span>
+						<p>VIP票（展位、晚宴、住宿）980元</p>
+						<span class="ticket_num">剩余：104</span>
+					</div>
+					<div class="ticket">
+						<span class="free">免费</span>
+						<p>VIP票（展位、晚宴、住宿）980元</p>
+						<span class="ticket_num">剩余：104</span>
+					</div>
+					<div class="ticket">
+						<span class="free">免费</span>
+						<p>VIP票（展位、晚宴、住宿）980元</p>
+						<span class="ticket_num">剩余：104</span>
+					</div>
+					<p>参会费用:</p>
+					<p>人民币1,800/人（仅限以上目标听众）</p>
+					<p>1.费用包括会议资料、午餐、晚餐、茶歇及参观，不含住宿。</p>
+					<p>2.特别优惠：同一公司每4人出席，将免其中1人参会费用（限7月24日前报名并付款）。</p>
+				</div>
+			</div>
+			<div class="joinde">
+				<p>已报名成员</p>
+				<a class="joinde_more" href="who_joined.html"></a>
+				<img src="../images/ang.jpg"/>
+				<img src="../images/ang.jpg"/>
+				<img src="../images/ang.jpg"/>
+				<img src="../images/ang.jpg"/>
+				<img src="../images/ang.jpg"/>
+				<img src="../images/ang.jpg"/>
+			</div>
+			<div class="buttons">
+		        <a class="ta_homepage">TA的主页</a>
+		        <a class="ijoin" href="#baoming">我要报名</a>
+		        <a class="share">分享</a>
+		    </div>
+		    
+		    
+		    
+		    
+		<!--报名模态窗-->
+			<div id="baoming" class="mui-modal">
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-close mui-pull-right" href="#baoming"></a>
+					<h1 class="mui-title">第十七届中国北京动漫游戏嘉年华</h1>
+				</header>
+				<div class="mui-content">
+					<div id="ticket_position">
+						<div class="ticket">
+							<span class="free">免费</span>
+							<p>VIP票（展位、晚宴、住宿）980元</p>
+							<span class="ticket_num">剩余：104</span>
+						</div>
+					</div>
+					<div class="title">
+						<span class="line"></span>
+						<span>完善报名信息</span>
+						<span class="line"></span>
+					</div>
+					<div class="user_info">
+						<p>姓名</p>
+						<input type="text" />
+						<p>手机</p>
+						<input type="number" />
+						<p>微信号</p>
+						<input  type="text"/>
+						<p>身份证号</p>
+						<input type="number" />
+					</div>
+					<div class="jion_buttons">
+						<a>我要报名</a>
+						<a>成为蕊客</a>
+					</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<!--<script src="../js/jquery.min.js"></script>-->
+		<script src="../js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+
+			});
+			
+//			返回箭头
+			function back(){
+				history.back();
+			};
+			
+			$(".ticket").click(function(){
+				$(this).addClass("ticket_checked").siblings().removeClass("ticket_checked");
+			});
+		</script>
+	</body>
+
+</html>

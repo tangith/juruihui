@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*清除默认样式*/
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+		/*设置背景渐变*/
+			body,html,.container{
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				background-image: linear-gradient(#FCE2CA,#F4F9E8);
+				background-attachment: fixed;
+			}
+		/*登录版块*/
+			#tab-list{
+				background-color: #F2F0E5;
+				margin: 0px auto;
+				width: 300px;
+				height: 350px;
+				box-shadow: 0 0 30px #6C6C6C;
+				border: 1px solid #EB8256;
+				position: relative;
+				top: 90px;
+			}
+			#nav li{
+				display: inline-block;
+				width: 50%;
+				text-align: center;
+				height: 40px;
+				color: #EB8256;
+				line-height: 40px;
+				font-family: "黑体";
+				border-bottom: 1px solid #EB8256;
+			}
+			#nav .active{
+				background-color: #EB8256;
+				color: #fff;
+			}
+			.input_body{
+				width: 90%;
+				margin: 0 auto;
+				padding-top: 10px;
+			}
+			.input_body input{
+				background: none;
+				border: none;
+				border-bottom: 1px solid #EB8256;
+			}
+			.input_body .button_next{
+				display: block;
+				background-color: #CBCACA;
+				width: 100%;
+				height: 25px;
+				color: #fff;
+				line-height: 25px;
+				text-align: center;
+				font-size: 12px;
+				border-radius: 5px;
+				margin-bottom: 10px;
+			}
+			.input_body a{
+				color: #454545;
+				font-size: 12px;
+			}
+			.input_body hr{
+				width: 80px;
+				border: none;
+				background-color: #000;
+				height: 1px;
+				position: relative;
+				top: 31px;
+			}
+			.input_body p{
+				text-align: center;
+				margin-top: 20px;
+				font-size: 12px;
+			}
+			.input_body .cooperation_login{
+				font-size: 12px;
+				text-align: center;
+			}
+			.input_body .cooperation_login div{
+				width: 50px;
+				display: inline-block;
+				margin: 0 10px;
+			}
+			.input_body .cooperation_login div img{
+				width: 40px;
+				height: 40px;
+			}
+			.input_body .cooperation_login div span{
+				display: block;
+			}
+		/*slogan文字*/
+			#slogan_pic{
+				width: 250px;
+				position: absolute;
+				left: 50%;
+				margin-left: -125px;
+				top: 460px;
+			}
+		/*交互部分*/
+			.hide{
+				display: none;
+			}
+			.show{
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+	<div class="container">
+		<div id="tab-list">
+			<ul id="nav"><li class="active" id="tab1">个人登录</li><li id="tab2">商家登录</li></ul>
+			<div class="input_body" id="personage">
+				<input type="text" name="" id="" value="" placeholder="请输入手机号/邮箱"/>
+				<input type="password" name="" id="" value="" placeholder="请输入密码"/>
+				<a class="button_next">下一步</a>
+				<a>聚蕊烩协议</a>
+				<a style="float: right;">忘记密码？</a>
+				<hr />
+				<hr style="float: right;" />
+				<p>使用第三方登录</p>
+				<div class="cooperation_login">
+					<div class="wechat">
+						<img src="../images/login_wechat.png"/>
+						<span>腾讯微信</span>
+					</div>
+					<div class="qq">
+						<img src="../images/login_qq.png"/>
+						<span>腾讯QQ</span>
+					</div>
+					<div class="sina">
+						<img src="../images/login_weibo.png"/>
+						<span>新浪微博</span>
+					</div>
+				</div>
+			</div>
+			<div class="hide input_body" id="merchant">
+				<input type="text" name="" id="" value="" placeholder="请输入手机号/邮箱"/>
+				<input type="password" name="" id="" value="" placeholder="请输入密码"/>
+				<a class="button_next">下一步</a>
+				<a>聚蕊烩协议</a>
+				<a style="float: right;">忘记密码？</a>
+				<hr />
+				<hr style="float: right;" />
+				<p>使用第三方登录</p>
+				<div class="cooperation_login">
+					<div class="wechat">
+						<img src="../images/login_wechat.png"/>
+						<span>腾讯微信</span>
+					</div>
+					<div class="qq">
+						<img src="../images/login_qq.png"/>
+						<span>腾讯QQ</span>
+					</div>
+					<div class="sina">
+						<img src="../images/login_weibo.png"/>
+						<span>新浪微博</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img id="slogan_pic" src="../images/slogan.png"/>
+	</div>
+	
+	
+	
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/class_operate.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			
+			
+			
+			
+			//个人商家切换
+			window.onload = function(){
+	 		var tab1 = document.getElementById("tab1");
+			var tab2 = document.getElementById("tab2");
+			var div1 = document.getElementById("personage");
+			var div2 = document.getElementById("merchant");
+			tab2.onclick = function(){
+				div1.style.display = "none";
+				$("#merchant").fadeIn();      //使用jquery中的fadeIn()方法使切换选项卡的时候有效果
+//				div2.style.display = "block";
+				addClass(tab2,"active");      //使用了class_operate.js中的函数
+				removeClass(tab1,"active");      //使用了class_operate.js中的函数
+			};
+			tab1.onclick = function(){
+				div2.style.display = "none";
+				$("#personage").fadeIn();      //使用jquery中的fadeIn()方法使切换选项卡的时候有效果
+//				div1.style.display = "block";
+				removeClass(tab2,"active");      //使用了class_operate.js中的函数
+				addClass(tab1,"active");      //使用了class_operate.js中的函数
+			};
+    	}
+		</script>
+	</body>
+
+</html>

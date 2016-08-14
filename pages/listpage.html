@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/listpagestyle.css"/>
+		<style>
+			/*.mui-card .mui-card-content .list_collect{
+				width: 40px;
+				height: 40px;
+				float: right;
+
+			}
+			.mui-card .mui-card-content .list_collect .collect_num{
+				text-align: center;
+				display: block;
+			}
+			.mui-card .mui-card-content .list_collect img{
+				width: 30px;
+				height: 30px;
+				margin: 0 auto;
+				display: block;
+			}
+			.list_info{
+				float: left;
+				color: #fff;
+				font-size: 12px;
+				text-align: center;
+				line-height: 20px;
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+			}
+			.list_info .list_info_tag{
+				display: inline-block;
+				width: 80px;
+				height: 20px;
+				background-color: #EB8256;
+				border-radius: 2px;
+			}
+			.list_apply{
+				width: 50px;
+				height: 20px;
+				text-align: right;
+				line-height: 20px;
+				font-size: 12px;
+				background-image: url(../images/list_apply.png);
+				background-size: 100%;
+				position: absolute;
+				right: 0px;
+				bottom: 5px;
+			}
+			.list_apply span{
+				margin-right: 3px;
+			}
+			.card_footer{
+				padding: 10px;
+				position: relative;
+			}
+			.card_footer img{
+				width: 20px;
+				height: 20px;
+				position: relative;
+				bottom: -5px;
+			}
+			.card_footer p{
+				margin-left: 0px;
+			}
+			.list_host{
+				width: 50px;
+				height: 50px;
+				padding: 2px;
+				background-color: #fff;
+				border-radius: 50%;
+				box-shadow: 0px 3px 3px #454545;
+				position: absolute;
+				top: 10px;
+				left:10px;
+			}
+			.list_host .list_host_img{
+				background: url(../images/ang.jpg) no-repeat center;
+				background-size: 110%;
+				height: 100%;
+				border-radius: 50%;
+			}
+			#keyword{
+				line-height: 45px;
+				font-size: 12px;
+				position: absolute;
+				right: 40px;
+			}
+			.play{
+				display: block;
+				width: 100px;
+				height: 100%;
+				background: url(../images/play.png) no-repeat center;
+				background-size: 100%;
+				margin: 0 auto;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" href="javascript:back();"></a>
+			<span id="keyword">
+				关键词
+			</span>
+			<a class="mui-icon mui-icon-bars mui-pull-right" id="guanjianci"></a>
+			<h1 class="mui-title">列表</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-card">
+				<div class="mui-card-content mui-card-media" style="height: 40vw;background-image:url(../images/cbd.jpg)">
+					<div class="list_collect">
+						<img src="../images/collect.png"/>
+						<span class="collect_num">
+							1
+						</span>
+					</div>
+					<div class="list_info">
+						<span class="list_info_tag">游戏&赛事</span>
+						<span class="list_scan">浏览<span class="list_scan_num">4</span></span>
+					</div>
+					<div class="list_apply">
+						<span>
+							可报名
+						</span>
+					</div>
+					<a class="play" href="list_details.html"></a>
+				</div>
+				<div class="card_footer">
+					<h5>第十七届中国北京动漫游戏嘉年华IDO17</h5>
+					<p><img src="../images/timeicon.png"/>2016/08/23-06-24</p>
+					<p><img src="../images/dingweiicon.png"/>朝阳区 天辰东路7号国家会议中心-<span>1.1km</span></p>
+				</div>
+				<div class="list_host">
+					<div class="list_host_img">
+						
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-content mui-card-media" style="height: 40vw;background-image:url(../images/cbd.jpg)">
+					<div class="list_collect">
+						<img src="../images/collect.png"/>
+						<span class="collect_num">
+							1
+						</span>
+					</div>
+					<div class="list_info">
+						<span class="list_info_tag">游戏&赛事</span>
+						<span class="list_scan">浏览<span class="list_scan_num">4</span></span>
+					</div>
+					<div class="list_apply">
+						<span>
+							可报名
+						</span>
+					</div>
+					<a class="play"></a>
+				</div>
+				<div class="card_footer">
+					<h5>第十七届中国北京动漫游戏嘉年华IDO17</h5>
+					<p><img src="../images/timeicon.png"/>2016/08/23-06-24</p>
+					<p><img src="../images/dingweiicon.png"/>朝阳区 天辰东路7号国家会议中心-<span>1.1km</span></p>
+				</div>
+				<div class="list_host">
+					<div class="list_host_img">
+						
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-content mui-card-media" style="height: 40vw;background-image:url(../images/cbd.jpg)">
+					<div class="list_collect">
+						<img src="../images/collect.png"/>
+						<span class="collect_num">
+							1
+						</span>
+					</div>
+					<div class="list_info">
+						<span class="list_info_tag">游戏&赛事</span>
+						<span class="list_scan">浏览<span class="list_scan_num">4</span></span>
+					</div>
+					<div class="list_apply">
+						<span>
+							可报名
+						</span>
+					</div>
+					<a class="play"></a>
+				</div>
+				<div class="card_footer">
+					<h5>第十七届中国北京动漫游戏嘉年华IDO17</h5>
+					<p><img src="../images/timeicon.png"/>2016/08/23-06-24</p>
+					<p><img src="../images/dingweiicon.png"/>朝阳区 天辰东路7号国家会议中心-<span>1.1km</span></p>
+				</div>
+				<div class="list_host">
+					<div class="list_host_img">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+
+			});
+			function back(){
+				history.back();
+			};
+			//			打开测试页面
+			document.getElementById('guanjianci').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'login.html',
+					id:'login'
+				});
+			});
+		</script>
+	</body>
+
+</html>

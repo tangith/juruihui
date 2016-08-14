@@ -1,0 +1,193 @@
+{
+	"index.html": {
+		"resources": [
+			"images/xiaoxi_default.png",
+			"images/search_icon.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"images/logo-font.png",
+			"css/mui.min.css",
+			"images/position_icon.png",
+			"images/faxian_default.png",
+			"images/shouye_active.png",
+			"images/my_default.png",
+			"images/fabu_default.png",
+			"pages/eight.html",
+			"images/logo-font-fff.png",
+			"images/dingwei.png",
+			"images/sousuo.png",
+			"pages/position_choose.html",
+			"pages/find.html",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf"
+		],
+		"refer": [
+			"pages/eight.html",
+			"pages/position_choose.html",
+			"pages/message.html",
+			"pages/my.html",
+			"pages/fabu.html",
+			"pages/find.html"
+		]
+	},
+	"pages/eight.html": {
+		"resources": [
+			"images/shequ.png",
+			"images/huodong.png",
+			"images/huodongzhongchou.png",
+			"images/ruike.png",
+			"images/huodongshouquan.png",
+			"images/sirendingzhi.png",
+			"images/huodongfenxiang.png",
+			"images/juwan.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"pages/listpage.html",
+			"pages/test.html"
+		],
+		"refer": [
+			"pages/listpage.html",
+			"pages/test.html"
+		]
+	},
+	"pages/listpage.html": {
+		"resources": [
+			"images/dingweiicon.png",
+			"images/cbd.jpg",
+			"js/mui.min.js",
+			"images/ang.jpg",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/list_apply.png",
+			"images/timeicon.png",
+			"images/collect.png",
+			"pages/eight.html",
+			"images/play.png",
+			"css/mui.min3.css",
+			"pages/list_details.html",
+			"css/listpagestyle.css"
+		],
+		"refer": [
+			"pages/eight.html",
+			"pages/list_details.html",
+			"pages/login.html"
+		]
+	},
+	"pages/test.html": {
+		"resources": [
+			"pages/eight.html"
+		],
+		"refer": [
+			"pages/eight.html"
+		]
+	},
+	"pages/list_details.html": {
+		"resources": [
+			"images/joined_more.png",
+			"images/qr-weixin-sm.png",
+			"images/ticket.png",
+			"pages/listpage.html",
+			"images/dingweiicon.png",
+			"images/cbd.jpg",
+			"js/mui.min.js",
+			"images/ang.jpg",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/list_apply.png",
+			"images/timeicon.png",
+			"images/collect.png",
+			"pages/iwantjion.html",
+			"pages/who_joined.html",
+			"js/jquery.min.js",
+			"js/jquery-1.6.4.min.js",
+			"images/ticket_checked.png"
+		],
+		"refer": [
+			"pages/listpage.html",
+			"pages/iwantjion.html",
+			"pages/who_joined.html"
+		]
+	},
+	"pages/iwantjion.html": {
+		"resources": [
+			"pages/list_details.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/list_details.html"
+		]
+	},
+	"pages/who_joined.html": {
+		"resources": [
+			"pages/list_details.html"
+		],
+		"refer": [
+			"pages/list_details.html"
+		]
+	},
+	"pages/position_choose.html": {
+		"resources": [
+			"index.html",
+			"css/common.css",
+			"pages/my.html",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"index.html",
+			"pages/message.html"
+		]
+	},
+	"pages/message.html": {
+		"resources": [
+			"images/activity_remind.png",
+			"images/joined_more.png",
+			"images/system_message.png",
+			"images/comments.png",
+			"images/official_message.png"
+		]
+	},
+	"pages/find.html": {
+		"resources": [
+			"images/dingweiicon.png",
+			"images/cbd.jpg",
+			"images/searcheb8256.png",
+			"images/nearby.png",
+			"images/play.png",
+			"images/ang.jpg",
+			"images/today.png",
+			"images/calendar.png",
+			"images/list_apply.png",
+			"images/timeicon.png",
+			"images/collect.png",
+			"css/listpagestyle.css",
+			"pages/list_details.html",
+			"images/time.png"
+		],
+		"refer": [
+			"pages/list_details.html"
+		]
+	},
+	"pages/fabu.html": {
+		"resources": [
+			"images/huodong.png",
+			"images/juwan.png"
+		]
+	},
+	"pages/my.html": {
+		"resources": [
+			"fonts/mui.ttf"
+		]
+	},
+	"pages/login.html": {
+		"resources": [
+			"images/login_qq.png",
+			"images/slogan.png",
+			"js/jquery.min.js",
+			"images/login_wechat.png",
+			"images/login_weibo.png",
+			"js/class_operate.js"
+		]
+	}
+}

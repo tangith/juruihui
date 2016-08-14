@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--meta标签？？？-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			html,body{
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				background-color: #fff;
+			}
+			a{
+				display: block;
+				text-decoration: none;
+				color: #fff;
+			}
+			a:link{color: #fff;}
+			a:visited{color: #fff;}
+			a:hover{color: #fff;}
+			a:active{color: #fff;}
+			.onetwothree{
+				width: 100%;
+				height: 31%;
+			}
+			.one{
+				width: 50%;
+				height: 100%;
+			}
+			.one .one_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #F6C1D2;
+			}
+			.one_inner:active{
+				background-color: #f292b3;
+			}
+			.twothree{
+				float: right;
+				width: 50%;
+				height: 100%;
+			}
+			.two{
+				height: 50%;
+				width: 100%;
+			}
+			.two .two_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #E87986;
+			}
+			.two_inner:active{
+				background-color: #e44f61;
+				}
+			.three{
+				height: 50%;
+				width: 100%;
+			}
+			.three .three_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #AFD782;
+			}
+			.three_inner:active{
+				background-color: #93d248;
+				}
+			.four{
+
+				width: 100%;
+				height: 23%;
+			}
+			.four .four_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #92C1DD;
+			}
+			.four_inner:active{
+				background-color: #6fb1de;
+			}
+			.fivesix{
+				width: 100%;
+				height: 23%;
+			}
+			.five{
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.five .five_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #EB8256;
+			}
+			.five_inner:active{
+				background-color: #e96b34;
+			}
+			.six{
+				width: 50%;
+				height: 100%;
+				float: right;
+			}
+			.six .six_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #E5A091;
+			}
+			.six_inner:active{
+				background-color: #e48067;
+			}
+			.seveneight{
+				height: 23%;
+			}
+			.seven{
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.seven .seven_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #FFBB50;
+			}
+			.seven_inner:active{
+				background-color: #ffae2c;
+			}
+			.eight{
+				width: 50%;
+
+				height: 100%;
+				float: right;
+			}
+			.eight #eight_inner{
+				width: 100%;
+				height: 100%;
+				background-color: #917BEC;
+			}
+			#eight_inner:active{
+				background-color: #7455e9;
+			}
+			.one,.two,.three,.four,.five,.six,.seven,.eight{
+				position: relative;
+				color: #fff;
+				padding: 2px;
+				box-sizing: border-box;
+				-moz-box-sizing:border-box; 
+    			-webkit-box-sizing:border-box;
+	}
+			.container{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+			}
+			img{
+				width: 80px;
+			}
+			.smallerimg{
+				width: 70px;
+			}
+			.vertical{
+				border: none;
+				width: 100px;
+				height: 130px;
+				position: absolute;
+				left: 50%;
+				bottom: 50%;
+				margin-bottom: -75px;
+				margin-left: -50px;
+			}
+			.horizontal{
+				border: none;
+				width: 200px;
+				height: 80px;
+				position: absolute;
+				left: 50%;
+				bottom: 50%;
+				margin-bottom: -40px;
+				margin-left: -100px;
+			}
+			.horizontal span{
+				position: relative;
+				bottom: 40px;
+			}
+			.horizontal_m img{
+				width: 66px;
+			}
+			.horizontal_m{
+				border: none;
+				width: 200px;
+				height: 66px;
+				position: absolute;
+				left: 50%;
+				bottom: 50%;
+				margin-bottom: -33px;
+				margin-left: -100px;
+			}
+			.horizontal_m span{
+				position: relative;
+				bottom: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		   <div class="onetwothree">
+		   		<div class="twothree">
+		   			<div class="two">
+		   				<a class="two_inner" href="listpage.html">
+		   					<div class="horizontal_m">
+								<img src="../images/huodong.png"/>
+								<span>
+									活动
+								</span>
+							</div>
+						</a>
+		   			</div>
+		   			<div class="three">
+		   				<a class="three_inner" href="listpage.html">
+			   				<div class="horizontal_m">
+								<img src="../images/juwan.png"/>
+								<span>
+									聚玩
+								</span>
+							</div>
+						</a>
+		   			</div>
+		   		</div>
+		   		<div class="one">
+		   			<a class="one_inner" href="listpage.html">
+		   				<div class="vertical">
+		   					<img src="../images/ruike.png"/>
+		   					<span>
+		   						蕊客
+		   					</span>
+		   				</div>
+		   			</a>
+		   		</div>
+		   </div>
+		   <div class="four">
+		   		<a class="four_inner" href="listpage.html">
+					<div class="horizontal">
+						<img src="../images/sirendingzhi.png"/>
+						<span>
+							私人订制
+						</span>
+					</div>
+				</a>
+		   </div>
+		   <div class="fivesix">
+				<div class="five">
+					<a class="five_inner" href="listpage.html">
+						<div class="vertical">
+		   					<img src="../images/huodongzhongchou.png"/>
+		   					<span>
+		   						活动众筹
+		   					</span>
+		   				</div>
+		   			</a>
+				</div>
+				<div class="six">
+					<a class="six_inner" href="listpage.html">
+						<div class="vertical">
+		   					<img src="../images/huodongshouquan.png"/>
+		   					<span>
+		   						活动授权
+		   					</span>
+		   				</div>
+		   			</a>
+				</div>
+		   </div>
+		   <div class="seveneight">
+		   		<div class="seven">
+		   			<a class="seven_inner" href="listpage.html">
+						<div class="vertical">
+		   					<img src="../images/huodongfenxiang.png"/>
+		   					<span>
+		   						活动分享
+		   					</span>
+		   				</div>
+		   			</a>
+				</div>
+				<div class="eight">
+					<a id="eight_inner">
+						<div class="vertical">
+		   					<img src="../images/shequ.png"/>
+		   					<span>
+		   						社区
+		   					</span>
+		   				</div>
+		   			</a>
+				</div>
+		   </div>
+		</div>
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: false,
+				statusBarBackground: '#f7f7f7',
+				gestureConfig: {
+					doubletap: true
+				},
+			});
+			
+			var subWebview = null,
+				template = null;
+			document.getElementById('eight_inner').addEventListener('tap', function() {
+				if (!mui.os.plus) {
+					mui.openWindow({
+						url: "test.html",
+						show: {
+							aniShow: 'zoom-fade-out',
+							duration: 300
+						}
+					});
+					return;
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			input::-webkit-input-placeholder {  /* WebKit browsers */
+   				 font-size: 12px;
+			}
+			input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   				 font-size: 12px;
+			}
+			input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   				 font-size: 12px;
+			}
+			input :-ms-input-placeholder { /* Internet Explorer 10+ */
+   				 font-size: 12px;
+			}
+		
+		
+		/*header*/
+			.mui-bar h1{
+				font-size: 20px;
+				font-family: "黑体";
+			}
+			.mui-bar a{
+				font-size: 16px !important;
+				margin-top: 5px;
+			}
+			.mui-input-row hr{
+				width: 95%;
+				border: none;
+				background-color: #bababa;
+				height: 1px;
+			}
+			.cost{
+				position: relative;
+			}
+			.del{
+				display: block;
+				width: 30px;
+				height: 30px;
+				background: url(../images/del.png) center center no-repeat;
+				background-size: 30px;
+				position: absolute;
+				right: 8px;
+				top: 0px;
+			}
+			
+			.mui-pull-right{
+				display: inline-block;
+				width: 40px;
+				height: 20px;
+				font-size: 16px;
+				margin-left: 5px;
+				text-align: center;
+				margin-top: 12px !important;
+			}
+			.done{
+				background-color: #eb8256;
+				color: #fff;
+			}
+			.line{
+				width: 95%;
+				height: 8px;
+				border: none;
+				background-color: #bababa;
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}
+			.add_more{
+				display: block;
+				width: 200px;
+				height:30px;
+				color: #ffffff;
+				background-color: #EB8256;
+				text-align: center;
+				line-height: 30px;
+				font-size: 14px;
+				border-radius: 5px;
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">设置活动费用</h1>
+			<a class="mui-pull-right done">完成</a>
+		</header>
+		<div class="mui-content">
+			<div class="cost">
+				<hr class="line" />
+				<a class="del"></a>
+				<div class="mui-input-row">
+					<label>费用名称：</label>
+					<input type="text" class="mui-input-clear" placeholder="第一类费用名称">
+					<hr />
+				</div>
+		  	 	<div class="mui-input-row">
+					<label>金额：</label>
+					<input type="text" class="mui-input-clear" placeholder="免费请填0，有人报名后不能修改">
+					<hr />
+				</div>
+				<div class="mui-input-row">
+					<label>名额限制：</label>
+					<input type="text" class="mui-input-clear" placeholder="默认无限制">
+					<hr />
+				</div>
+			</div>
+
+			<a class="add_more">添加费用项</a>
+			
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

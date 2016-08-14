@@ -1,0 +1,93 @@
+			.mui-card .mui-card-content .list_collect{
+				width: 40px;
+				height: 40px;
+				float: right;
+
+			}
+			.mui-card .mui-card-content .list_collect .collect_num{
+				text-align: center;
+				display: block;
+			}
+			.mui-card .mui-card-content .list_collect img{
+				width: 30px;
+				height: 30px;
+				margin: 0 auto;
+				display: block;
+			}
+			.list_info{
+				float: left;
+				color: #fff;
+				font-size: 12px;
+				text-align: center;
+				line-height: 20px;
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+			}
+			.list_info .list_info_tag{
+				display: inline-block;
+				width: 80px;
+				height: 20px;
+				background-color: #EB8256;
+				border-radius: 2px;
+			}
+			.list_apply{
+				width: 50px;
+				height: 20px;
+				text-align: right;
+				line-height: 20px;
+				font-size: 12px;
+				background-image: url(../images/list_apply.png);
+				background-size: 100%;
+				position: absolute;
+				right: 0px;
+				bottom: 5px;
+			}
+			.list_apply span{
+				margin-right: 3px;
+			}
+			.card_footer{
+				padding: 10px;
+				position: relative;
+			}
+			.card_footer img{
+				width: 16px;
+				height: 16px;
+				position: relative;
+				margin-right: 5px;
+				bottom: -5px;
+			}
+			.card_footer p{
+				margin-left: 0px;
+			}
+			.list_host{
+				width: 50px;
+				height: 50px;
+				padding: 2px;
+				background-color: #fff;
+				border-radius: 50%;
+				box-shadow: 0px 3px 3px #454545;
+				position: absolute;
+				top: 10px;
+				left:10px;
+			}
+			.list_host .list_host_img{
+				background: url(../images/ang.jpg) no-repeat center;
+				background-size: 110%;
+				height: 100%;
+				border-radius: 50%;
+			}
+			#keyword{
+				line-height: 45px;
+				font-size: 12px;
+				position: absolute;
+				right: 40px;
+			}
+			.play{
+				display: block;
+				width: 100px;
+				height: 100%;
+				background: url(../images/play.png) no-repeat center;
+				background-size: 100%;
+				margin: 0 auto;
+			}

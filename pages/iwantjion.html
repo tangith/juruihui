@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+			
+			.mui-content{
+				width: 95%;
+				margin: 0 auto;
+			}
+			/*完善报名信息*/
+			.title{
+				width: 100%;
+				text-align: center;
+				padding-top: 30px;
+				padding-bottom: 20px;
+			}
+			.title .line{
+				display: inline-block;
+				width: 30%;
+				height: 1px;
+				background-color: #222;
+				border: none;
+				position: relative;
+				top: -6px;
+			}
+			
+			/*按钮*/
+			.buttons{
+				width: 100%;
+				text-align: center;
+			}
+			.buttons a{
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				background-color: #EB8256;
+				border-radius: 3px;
+				color: #FFF;
+				line-height: 30px;
+				margin: 10px;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left" href="javascript:back();"></a>
+			<h1 class="mui-title">第十七届中国北京动漫游戏嘉年华IDO17</h1>
+		</header>
+		<div class="mui-content">
+			<div class="title">
+				<span class="line"></span>
+				<span>完善报名信息</span>
+				<span class="line"></span>
+			</div>
+			<div class="user_info">
+				<p>姓名</p>
+				<input type="text" />
+				<p>手机</p>
+				<input type="number" />
+				<p>微信号</p>
+				<input  type="text"/>
+				<p>身份证号</p>
+				<input type="number" />
+			</div>
+			<div class="buttons">
+				<a>我要报名</a>
+				<a>成为蕊客</a>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				
+			});
+			function back(){
+				history.back();
+			}
+		</script>
+	</body>
+
+</html>

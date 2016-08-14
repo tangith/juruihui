@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			.mui-content a{
+				display: block;
+				height: 50px;
+				width: 90%;
+				margin: 0 auto;
+				border-bottom: 1px solid #8F8F94;
+				padding-bottom: 0px;
+				position: relative;
+			}
+			.mui-content a:first-child{
+				margin-top: 30px;
+			}
+			.mui-content a span{
+				color: #000;
+			}
+			.mui-content a img{
+				width: 30px;
+				height: 30px;
+				position: relative;
+				top: 6px;
+			}
+			.mui-content a img:last-child{
+				float: right;
+				width: 20px;
+				height: 20px;
+				top: 15px;
+			}
+		/*红点提醒*/
+			.news{
+				display: block;
+				width: 10px;
+				height: 10px;
+				background-color: red;
+				border-radius: 100%;
+				position: absolute;
+				top: 5px;
+				left: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+		    <a>
+		    	<img src="../images/comments.png"/>
+		    	<span class="news"></span>
+		    	<span>评论和赞</span>
+		    	<img src="../images/joined_more.png"/>
+		    </a>
+		    <a>
+		    	<img src="../images/activity_remind.png"/>
+		    	<span class="news"></span>
+		    	<span>活动提醒</span>
+		    	<img src="../images/joined_more.png"/>
+		    </a>
+		    <a>
+		    	<img src="../images/system_message.png"/>
+		    	<span class="news"></span>
+		    	<span>系统消息</span>
+		    	<img src="../images/joined_more.png"/>
+		    </a>
+		    <a>
+		    	<img src="../images/official_message.png"/>
+		    	<span class="news"></span>
+		    	<span>官方通知</span>
+		    	<img src="../images/joined_more.png"/>
+		    </a>
+		</div>
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>
