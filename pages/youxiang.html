@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*header*/
+			.mui-bar{
+				background-color: #EB8256;
+			}
+			.mui-bar h1{
+				font-size: 18px;
+				font-family: "黑体";
+				color: #fff;
+			}
+			.mui-bar .mui-icon{
+				font-size: 16px !important;
+				margin-top: 5px;
+				color: #fff;
+			}
+			.mui-bar .done{
+				background-color: #EFEFF4;
+				color: #000;
+				font-size: 10px;
+				padding: 0px 8px;
+				position: relative;
+				top: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">邮箱</h1>
+			<a class="mui-pull-right done">完成</a>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group">
+					<div class="mui-input-row">
+						<input type="email" class="mui-input-clear" placeholder="输入邮箱">
+					</div>
+			</form>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

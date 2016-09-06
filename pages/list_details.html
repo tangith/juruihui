@@ -232,6 +232,9 @@
 				right: 5px;
 				top: 13px;
 			}
+			.host a:active{
+				background-color: #CD724C;
+			}
 			.host h6{
 				font-size: 18px;
 				font-weight: bold;
@@ -286,12 +289,23 @@
 				margin: 10px;
 				font-size: 14px;
 			}
+			#baoming .jion_buttons a:active{
+				background-color: #CD724C;
+			}
+			
+		/*按钮点击*/
+			.ijoin:active{
+				background-color: #cd724c;
+			}
+			.ta_homepage:active,.share:active{
+			background-color: #a9a9a9;
+		}
 		</style>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class=" mui-icon mui-icon-left-nav mui-pull-left" href="javascript:back();"></a>
+			<a class=" mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
 			<h1 class="mui-title">第十七届中国北京动漫游戏嘉年华</h1>
 		</header>
 		<div class="mui-content">
@@ -389,11 +403,11 @@
 							<P>活动商公众号</p>
 						</div>
 					</div>
-					<p>联系人：<span></span></p>
-					<p>联系电话：<span></span></p>
-					<p>QQ：<span></span></p>
-					<p>QQ群：<span></span></p>
-					<p>邮箱：<span></span></p>
+					<p>联系人：<span>聚蕊烩</span></p>
+					<p>联系电话：<span>13522223333</span></p>
+					<p>QQ：<span>12345678</span></p>
+					<p>QQ群：<span>5555555</span></p>
+					<p>邮箱：<span>123456@163.com</span></p>
 					
 				</div>
 			</div>
@@ -497,10 +511,10 @@
 
 			});
 			
-//			返回箭头
-			function back(){
-				history.back();
-			};
+////			返回箭头
+//			function back(){
+//				history.back();
+//			};
 			
 			$(".ticket").click(function(){
 				$(this).addClass("ticket_checked").siblings().removeClass("ticket_checked");

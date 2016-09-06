@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*header*/
+			.mui-bar h1{
+				color: #EB8256;
+				font-size: 26px;
+				font-family: "黑体";
+			}
+			.mui-bar a{
+				font-size: 16px !important;
+				margin-top: 5px;
+			}
+			.mui-pull-right{
+				display: inline-block;
+				width: 40px;
+				height: 20px;
+				font-size: 16px;
+				margin-left: 5px;
+				text-align: center;
+				margin-top: 12px !important;
+			}
+			.fabu{
+				background-color: #c4c4c4;
+				color: #4c4c4c;
+			}
+		
+		
+		
+		/*提示PC发布*/
+			.remind-bar{
+				width: 100%;
+				height: 15px;
+				background-color: #C4C4C4;
+				position: fixed;
+				top: 44px;
+				z-index: 1;
+			}
+			.remind-bar p{
+				color: #333;
+				font-size: 10px;
+				text-indent: 1.5em;
+				line-height: 15px;
+			}
+		/*图片容器*/
+			.pic-container{
+				width: 95%;
+				height: 200px;
+				border: 1px solid #bababa;
+				margin: 0 auto;
+				margin-top: 20px;
+				background: url(../images/tupianshangchuan.png) center center no-repeat;
+				background-size: 115px;
+			}
+			
+			
+			
+			
+			.mui-input-row hr{
+				width: 95%;
+				border: none;
+				background-color: #bababa;
+				height: 1px;
+			}
+			.mui-input-row i{
+				font-style: normal;
+			}
+			.mui-input-row textarea{
+				background-color: transparent;
+				margin-bottom: 0px;
+				border: none;
+			}
+			.mui-input-row .insert{
+				display: inline-block;
+			}
+			.mui-input-row .insert img{
+				width: 20px;
+				height: 20px;
+				margin-left: 8px;
+			}
+			.line{
+				width: 95%;
+				height: 8px;
+				border: none;
+				background-color: #bababa;
+				margin: 0 auto;
+			}
+		/*下面三个*/
+			.mui-table-view{
+				background-color: transparent;
+			}
+			.mui-table-view:before{
+				height: 0;
+			}
+		/*下面的两个按钮*/
+			.bottom-btn{
+				width: 300px;
+				height: 35px;
+				margin: 20px auto;
+				text-align: center;
+			}
+			.bottom-btn a{
+				display: inline-block;
+				width: 120px;
+				height: 35px;
+				line-height: 35px;
+				color: #fff;
+				background-color: #EB8256;
+				border-radius: 3px;
+			}
+			.bottom-btn a:active{
+				background-color: #cd724c;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">聚玩</h1>
+			<a class="mui-pull-right fabu">发布</a>
+			<a class="mui-pull-right yulan">预览</a>
+		</header>
+		<div class="mui-content">
+		    <div class="remind-bar">
+		    	<p>PC端发布更便捷！！www.juruihui.com</p>
+		    </div>
+		    <div class="pic-container">
+		    	<img src=""/>
+		    </div>
+			<div class="mui-input-row">
+				<label>聚玩主题：</label>
+				<input type="text" class="mui-input-clear">
+				<hr />
+			</div>
+		    <div class="mui-input-row">
+				<label>开始时间：</label>
+				<input type="text" class="mui-input-clear">
+				<hr />
+			</div>
+			<div class="mui-input-row">
+				<label>结束时间：</label>
+				<input type="text" class="mui-input-clear">
+				<hr />
+			</div>
+			<div class="mui-input-row">
+				<label>聚玩地点：</label>
+				<input type="text" class="mui-input-clear">
+				<hr />
+			</div>
+			<div class="mui-input-row" style="margin: 10px 5px;">
+				<textarea id="textarea" rows="5" placeholder="聚玩详情描述："></textarea>
+				<div class="insert">
+					<img src="../images/zhaoxiangji-02.png"/>
+					<img src="../images/shipin-02.png"/>
+				</div>
+			</div>
+			<hr class="line" />
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">聚玩类型：</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">聚玩费用：</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">报名设置：</a>
+				</li>
+			</ul>
+			<div class="bottom-btn">
+				<a id="preview">预览</a>
+				<a id="publish">发布</a>
+			</div>
+
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

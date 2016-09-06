@@ -100,12 +100,14 @@
 			"pages/who_joined.html",
 			"js/jquery.min.js",
 			"js/jquery-1.6.4.min.js",
-			"images/ticket_checked.png"
+			"images/ticket_checked.png",
+			"pages/find.html"
 		],
 		"refer": [
 			"pages/listpage.html",
 			"pages/iwantjion.html",
-			"pages/who_joined.html"
+			"pages/who_joined.html",
+			"pages/find.html"
 		]
 	},
 	"pages/iwantjion.html": {
@@ -146,6 +148,9 @@
 			"images/system_message.png",
 			"images/comments.png",
 			"images/official_message.png"
+		],
+		"refer": [
+			"pages/activity_remind.html"
 		]
 	},
 	"pages/find.html": {
@@ -163,7 +168,12 @@
 			"images/collect.png",
 			"css/listpagestyle.css",
 			"pages/list_details.html",
-			"images/time.png"
+			"images/time.png",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/mui.picker.min.js",
+			"css/mui.picker.min.css"
 		],
 		"refer": [
 			"pages/list_details.html"
@@ -173,11 +183,41 @@
 		"resources": [
 			"images/huodong.png",
 			"images/juwan.png"
+		],
+		"refer": [
+			"pages/fabu-activity.html",
+			"pages/fabu-juwan.html"
 		]
 	},
 	"pages/my.html": {
 		"resources": [
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"images/setting_icon.png",
+			"images/collected.png",
+			"images/zhuji.png",
+			"images/my_pic.png",
+			"images/guanzhu.png",
+			"images/my_banner.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"pages/my02.html"
+		],
+		"refer": [
+			"pages/setting.html",
+			"pages/personal_data.html",
+			"pages/my-zuji.html",
+			"pages/my02.html",
+			"pages/guanzhu-zhubanfang.html",
+			"pages/yiwancheng.html",
+			"pages/daicanyu.html",
+			"pages/quanbupingzheng.html",
+			"pages/daifukuan.html",
+			"pages/shoucang.html",
+			"pages/daicanyu-if.html",
+			"pages/guanzhu-zhubanfang-if.html",
+			"pages/yiwancheng-if.html",
+			"pages/quanbupingzheng-if.html",
+			"pages/shoucang-if.html"
 		]
 	},
 	"pages/login.html": {
@@ -187,7 +227,426 @@
 			"js/jquery.min.js",
 			"images/login_wechat.png",
 			"images/login_weibo.png",
-			"js/class_operate.js"
+			"js/class_operate.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"pages/setting.html": {
+		"resources": [
+			"css/feedback.css",
+			"js/feedback.js",
+			"js/mui.view.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"pages/set-password.html",
+			"pages/youxiang.html"
+		],
+		"refer": [
+			"pages/set-password.html",
+			"pages/youxiang.html"
+		]
+	},
+	"pages/personal_data.html": {
+		"resources": [
+			"css/feedback.css",
+			"js/feedback.js",
+			"js/mui.view.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/my_pic.png",
+			"js/mui.picker.min.js",
+			"css/mui.picker.min.css",
+			"js/born.js"
+		],
+		"refer": [
+			"pages/xuanze-city.html",
+			"pages/nicheng.html"
+		]
+	},
+	"pages/fabu-activity.html": {
+		"resources": [
+			"images/shipin-02.png",
+			"images/zhaoxiangji-02.png",
+			"images/tupianshangchuan.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.picker.min.js",
+			"css/mui.picker.min.css"
+		],
+		"refer": [
+			"pages/baoming-info.html",
+			"pages/add-poster.html",
+			"pages/huodongfeiyong.html"
+		]
+	},
+	"pages/fabu-juwan.html": {
+		"resources": [
+			"images/shipin-02.png",
+			"images/zhaoxiangji-02.png",
+			"images/tupianshangchuan.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/huodongfeiyong.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/del.png"
+		]
+	},
+	"pages/activity_remind.html": {
+		"resources": [
+			"images/joined_more.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		]
+	},
+	"pages/my-zuji.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/xuanze-city.html": {
+		"resources": [
+			"css/mui.indexedlist.css",
+			"js/mui.indexedlist.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/my02.html": {
+		"resources": [
+			"images/duanxinzhanghu.png",
+			"images/huodongshouru.png",
+			"images/yanpiao.png",
+			"images/wodezhinan.png",
+			"images/guanlibaoming.png",
+			"images/wodezhuye.png",
+			"images/no-v.png",
+			"images/wodefensi.png",
+			"images/guanlihuodong.png",
+			"images/setting_icon.png",
+			"fonts/mui.ttf",
+			"images/my_pic.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"pages/my.html",
+			"js/jquery-1.6.4.min.js",
+			"js/bootstrap.min.css",
+			"js/bootstrap.min.js",
+			"js/jquery.min.js",
+			"css/bootstrap.min.css"
+		],
+		"refer": [
+			"pages/my.html",
+			"pages/setting.html",
+			"pages/duanxin.html",
+			"pages/guanlihuodong.html",
+			"pages/guanlibaoming.html",
+			"pages/yanpiao.html",
+			"pages/my-zuji.html",
+			"pages/my-zhuye.html",
+			"pages/my-fensi.html",
+			"pages/activity_income.html",
+			"pages/personal_data.html",
+			"pages/shenfen-geren.html",
+			"pages/guanlibaoming-if.html",
+			"pages/guanlihuodong-if.html",
+			"pages/yanpiao-if.html",
+			"pages/my-fensi-if.html"
+		]
+	},
+	"pages/guanzhu-zhubanfang.html": {
+		"resources": [
+			"images/doudou.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/yiwancheng.html": {
+		"resources": [
+			"images/piao.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/daicanyu.html": {
+		"resources": [
+			"images/piao.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/quanbupingzheng.html": {
+		"resources": [
+			"images/piao.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/daifukuan.html": {
+		"resources": [
+			"images/piao.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/duanxin.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/doudou.png",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		]
+	},
+	"pages/guanlihuodong.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/doudou.png",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/guanlibaoming.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/doudou.png",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/yanpiao.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/doudou.png",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/my-zhuye.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/add.png"
+		],
+		"refer": [
+			"pages/my-home.html"
+		]
+	},
+	"pages/my-fensi.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/activity_income.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/jquery.min.js",
+			"js/bootstrap.min.js",
+			"css/bootstrap.min.css"
+		],
+		"refer": [
+			"pages/shenfen-geren.html",
+			"pages/zhangdan.html"
+		]
+	},
+	"pages/my-home.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/add.png",
+			"images/ang.jpg",
+			"images/share.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/shoucang.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/doudou.png",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/baoming-info.html": {
+		"resources": [
+			"images/del.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/set-password.html": {
+		"resources": [
+			"pages/setting.html"
+		],
+		"refer": [
+			"pages/setting.html"
+		]
+	},
+	"pages/youxiang.html": {
+		"resources": [
+			"pages/setting.html"
+		],
+		"refer": [
+			"pages/setting.html"
+		]
+	},
+	"pages/add-poster.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/identity-v.html": {
+		"resources": [
+			"images/id01.png",
+			"images/id04.png",
+			"images/id-front.png",
+			"images/right.png",
+			"images/id-back.png",
+			"images/id02.png",
+			"images/id03.png",
+			"images/error.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/shenfen-geren.html": {
+		"resources": [
+			"images/weirenzheng.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"pages/identity-v.html",
+			"pages/shenfen-qiye.html"
+		]
+	},
+	"pages/shenfen-qiye.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/weirenzheng.png"
+		],
+		"refer": [
+			"pages/upload-enterprise.html",
+			"pages/identity-v.html"
+		]
+	},
+	"pages/upload-enterprise.html": {
+		"resources": [
+			"images/enterprise.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/zhangdan.html": {
+		"resources": [
+			"images/zhangdan.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/daicanyu-if.html": {
+		"resources": [
+			"js/jquery.min.js",
+			"js/bootstrap.min.js",
+			"css/bootstrap.min.css",
+			"images/cbd.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/guanzhu-zhubanfang-if.html": {
+		"resources": [
+			"images/zhubanfang-icon02.png",
+			"js/mui.min.js",
+			"images/dot3.png",
+			"images/ang.jpg",
+			"fonts/mui.ttf",
+			"images/zhubanfang-icon01.png",
+			"css/mui.min.css"
+		]
+	},
+	"pages/yiwancheng-if.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/guanlibaoming-if.html": {
+		"resources": [
+			"images/ang.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/guanlihuodong-if.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"js/mui.min.js",
+			"images/doudou.png",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/shoucang-if.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"js/mui.min.js",
+			"images/dot3.png",
+			"images/doudou.png",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/yanpiao-if.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"pages/my-fensi-if.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/ang.jpg",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
 		]
 	}
 }

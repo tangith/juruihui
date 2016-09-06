@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*header*/
+			.mui-bar{
+				background-color: #EB8256;
+			}
+			.mui-bar h1{
+				font-size: 18px;
+				font-family: "黑体";
+				color: #fff;
+			}
+			.mui-bar .mui-icon{
+				font-size: 16px !important;
+				margin-top: 5px;
+				color: #fff;
+			}
+			.mui-bar .done{
+				background-color: #EFEFF4;
+				color: #000;
+				font-size: 10px;
+				padding: 0px 8px;
+				position: relative;
+				top: 12px;
+			}
+			/*添加活动分类*/
+			.add-btn{
+				width: 120px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				color: #000;
+				display: block;
+				margin: 0 auto;
+				background-color: #fff;
+				font-size: 14px;
+				border-radius: 3px;
+				margin-top: 10px;
+			}
+			.add-btn:active{
+				background-color: #e3e3e6;
+				color: #000;
+			}
+			/*查看我的主页*/
+			.see-my-home{
+				display: block;
+				width: 100%;
+				height: 60px;
+				position: fixed;
+				bottom: 0px;
+				color: #eb8256;
+				text-align: center;
+				line-height: 60px;
+				background-color: #fff;
+				font-size: 14px;
+			}
+			.see-my-home:active{
+				background-color: #e4e4e4;
+				color: #EB8256;
+			}
+			
+			/*添加一个分类*/
+			.fenlei-block{
+				width: 100%;
+				height: 40px;
+				background-color: #fff;
+				border-left: 3px solid #eb8256;
+				margin-top: 10px;
+				position: relative;
+			}
+			.fenlei-block span{
+				line-height: 40px;
+				padding-left: 20px;
+			}
+			.fenlei-block .add-icon{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				right: 15px;
+				top: 9px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">我的</a>
+			<h1 class="mui-title">我的主页</h1>
+			<a class="mui-pull-right done">保存</a>
+		</header>
+		<div class="mui-content">
+			<a class="add-btn">+ 添加活动分类</a>
+			<a class="see-my-home" id="my-home">查看我的主页</a>
+			
+			<div class="fenlei-block">
+				<span class="block-name">
+					精选活动
+				</span>
+				<img src="../images/add.png" class="add-icon"/>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			
+//			打开我的主页页面
+			document.getElementById('my-home').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'my-home.html',
+					id:'my-home',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

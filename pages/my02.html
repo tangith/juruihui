@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>聚蕊烩</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		
+		
+		
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+		<style>
+			.mui-table-view .mui-table-view-cell:first-child {
+				margin-top: 15px;
+			}
+			.indent{
+				text-indent: 30px;
+			}
+			.mui-table-view-cell img{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: 15px;
+			}
+			.table-view-cell .my_num{
+				display: inline-block !important;
+				width: 32%;
+				height: 60px;
+				margin: 0px !important;
+				text-align: center;
+				font-size: 13px;
+				box-sizing: border-box;
+			}
+			.table-view-cell .my_num .num_block span{
+				display: block;
+			}
+			.table-view-cell .my_num .num_block img{
+				width: 30px;
+				height: 30px;
+			}
+			.table-view-cell a{
+				color: #000;
+			}
+			.table-view-cell a:active{
+				background-color: #EEE;
+			}
+			.border-lf{
+				border-right: 1px solid #ccc;
+				border-left: 1px solid #CCC;
+			}
+
+
+
+		/*header*/
+			.mui-bar{
+				background-color: #EB8256;
+				text-align: center;
+			}
+			.mui-bar-nav{
+				box-shadow: 0 1px 6px #EB8256;
+				-webkit-box-shadow: 0 1px 6px #EB8256;
+			}
+			.mui-bar-nav a:active{
+				color: #EB8256;
+			}
+			#setting{
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: url(../images/setting_icon.png) center center no-repeat;
+				background-size: 20px;
+				position: absolute;
+				top: 12px;
+				right: 12px;
+			}
+			.my_btn{
+				display: inline-block;
+				width: 60px;
+				height: 25px;
+				background-color: #F5C1AB;
+				font-family: "黑体";
+				text-align: center;
+				margin: 0 auto;
+				line-height: 25px;
+				font-size: 14px;
+				position: relative;
+				top: 10px;			}
+			.my_btn_l{
+				background-color: #F5C1AB;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+			.my_btn_r{
+				background-color: #fff;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+			.table-view-cell{
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+			}
+		/*头像展示部分*/
+			.top-head{
+				width: 100%;
+				height: 150px;
+				text-align: center;
+				color: #fff;
+				background-color: #EB8256;
+				padding-top: 10px;
+				margin-bottom: 15px;
+			}
+			.top-head .my-pic{
+				width: 60px;
+				height: 60px;
+				border-radius: 100%;
+				box-shadow: 0 4px 8px #000;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.top-head .my-pic img{
+				width: 60px;
+				height: 60px;
+			}
+			.top-head .my-pic .change{
+				position: absolute;
+				display: block;
+				width: 80px;
+				bottom: 0px;
+				font-size: 10px;
+				background: rgba(0,0,0,0.4);
+				right: -10px;
+				line-height: 21px;
+			}
+			#my-name{
+				color: #fff;
+				padding-top: 10px;
+			}
+			#login{
+				border: 1px solid #fff;
+				display: block;
+				width: 55px;
+				height: 20px;
+				color: #fff;
+				font-size: 10px;
+				line-height: 20px;
+				margin: 0 auto;
+				border-radius: 3px;
+			}
+			#no-v{
+				position: absolute;
+				width: 60px;
+				height: 22px;
+				background: rgba(0,0,0,0.4);
+				font-size: 10px;
+				right: 0px;
+				top: 70px;
+				line-height: 22px;
+			}
+			#no-v img{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: -20px;
+				z-index: 1;
+			}
+			#no-v .left-radius{
+				display: block;
+				width: 22px;
+				height: 22px;
+				position: absolute;
+				left: -22px;
+				top: 0px;
+				border-top-left-radius: 100%;
+				border-bottom-left-radius: 100%;
+				background-color: rgba(0,0,0,0.4);
+			}
+			
+		/*消除bootstrap的样式冲突*/
+			.mui-bar a{
+				color: #EB8256;
+			}
+			a{
+				text-decoration: none !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="my_btn my_btn_l" href="my.html">参与者</a><a class="my_btn my_btn_r">主办方</a>
+	  		<a class="mui-pull-right" id="setting"></a>
+		</header>
+		<div class="mui-content">
+			<div class="top-head">
+				<div class="my-pic" id="my_some">
+					<span class="change">修改</span>
+					<img src="../images/my_pic.png"/>
+				</div>
+				<p id="my-name">西瓜不甜</p>
+				<p id="login">QQ登录</p>
+				<div id="no-v" data-toggle="modal" data-target="#myModal">
+					<img src="../images/no-v.png"/>
+					<a class="left-radius"></a>身份未认证
+				</div>
+			</div>
+			<ul class="mui-table-view">
+				<li class="table-view-cell" style="height: 80px;width: 100%;">
+					<a class="my_num" id="guanlihuodong">
+						<div class="num_block">
+							<img src="../images/guanlihuodong.png"/>
+							<span>管理活动</span>
+						</div>
+					</a>
+					<a class="my_num border-lf" id="guanlibaoming">
+						<div class="num_block">
+							<img src="../images/guanlibaoming.png"/>
+							<span>管理报名</span>
+						</div>
+					</a>
+					<a class="my_num" id="yanpiao">
+						<div class="num_block">
+							<img src="../images/yanpiao.png"/>
+							<span>验票</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		    <ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right indent" id="activity_income">
+						<img src="../images/huodongshouru.png"/>
+						活动收入
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="duanxin">
+					<a class="mui-navigate-right indent">
+						<img src="../images/duanxinzhanghu.png"/>
+						短信账户
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right indent" id="my-zhuye">
+						<img src="../images/wodezhuye.png"/>
+						我的主页
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right indent" id="my-fensi">
+						<img src="../images/wodefensi.png"/>
+						我的粉丝
+					</a>
+				</li><li class="mui-table-view-cell">
+					<a class="mui-navigate-right indent">
+						<img src="../images/wodezhinan.png"/>
+						我的指南
+					</a>
+				</li>
+			</ul>
+				
+				
+				
+				
+				
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="margin-top: 200px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: #EB8256;">为什么要身份认证？</h4>
+      </div>
+      <div class="modal-body">
+        <p>1.进行身份认证可以提高您的公信力</p>
+        <p>2.为了您账户资金安全，只有认证通过后，才可以设置您本人的收款账户，进行提现</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" style="background-color: #EB8256; border-color: #EB8256;" id="to-v">立即认证</button>
+      </div>
+    </div>
+  </div>
+</div>
+				
+				
+				
+				
+				
+				
+				
+		</div>
+
+
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../js/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../js/bootstrap.min.js"></script>
+
+	</body>
+	<script src="../js/mui.min.js "></script>
+	<script>
+
+//			打开个人资料页面
+			document.getElementById('my_some').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'personal_data.html',
+					id:'personal_data',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开setting页面
+			document.getElementById('setting').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'setting.html',
+					id:'setting',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+
+//			打开管理活动页面
+			document.getElementById('guanlihuodong').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'guanlihuodong-if.html',
+					id:'guanlihuodong-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开管理报名页面
+			document.getElementById('guanlibaoming').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'guanlibaoming-if.html',
+					id:'guanlibaoming-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开验票页面
+			document.getElementById('yanpiao').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'yanpiao-if.html',
+					id:'yanpiao-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开活动收入页面
+			document.getElementById('activity_income').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'activity_income.html',
+					id:'activity_income',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开短信账户页面
+			document.getElementById('duanxin').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'duanxin.html',
+					id:'duanxin',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开我的主页页面
+			document.getElementById('my-zhuye').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'my-zhuye.html',
+					id:'my-zhuye',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开我的粉丝页面
+			document.getElementById('my-fensi').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'my-fensi-if.html',
+					id:'my-fensi-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+
+
+//		去认证
+			document.getElementById("v")
+			document.getElementById('to-v').addEventListener('tap',function(){
+				$('#myModal').modal('hide');
+				mui.openWindow({
+					url:'shenfen-geren.html',
+					id:'shenfen-geren',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+	</script>
+
+</html>

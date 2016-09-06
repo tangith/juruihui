@@ -1,0 +1,80 @@
+
+
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*选项卡切换*/
+		.mui-slider{
+			background-color: #fff;
+		}
+		.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+			border-bottom: 2px solid;
+		}
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+			color: #EB8256;
+		}
+		/*if-no*/
+		.if-no{
+			width: 200px;
+			text-align: center;
+			margin: 0 auto;
+			padding-top: 60px;
+		}
+		.if-no img{
+			width: 60px;
+			height: 60px;
+		}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">管理活动</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						活动
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						投票
+					</a>	
+				</div>
+			</div>
+	<!--选项卡内容区-->
+			<div id="item1mobile" class="mui-control-content mui-active">
+				<div class="if-no">
+					<img src="../images/doudou.png"/>
+					<p>您还没有发布活动哦</p>
+				</div>
+			</div>
+			<div id="item2mobile" class="mui-control-content">
+				<div class="if-no">
+					<img src="../images/doudou.png"/>
+					<p>您还没有发布投票哦</p>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

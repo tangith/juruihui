@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*加载信息*/
+			#loading-info{
+				text-align: center;
+				margin-top: 30px;
+				font-size: 12px;
+			}
+		/*我关注了几个主办方*/
+		.top-p{
+			color: #7C7C7C;
+			padding-top: 10px;
+			text-indent: 10px;
+		}
+		.top-p span{
+			font-size: 24px;
+			color: #000;
+		}
+		/*我关注的主办方*/
+			.guanzhu-block{
+				width: 98%;
+				height: auto;
+				background-color: #fff;
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}
+			.guanzhu-block .block-top{
+				width: 100%;
+				height: 100%;
+				padding: 10px;
+				position: relative;
+			}
+			.guanzhu-block .block-top p{
+				padding-left: 50px;
+			}
+			.guanzhu-block .block-top .touxiang{
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				border-radius: 100%;
+				border: 1px solid #eee;
+			}
+			.guanzhu-block .block-top .dot3{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				right: 10px;
+				top: 5px;
+			}
+			.guanzhu-block .block-top .zhubanfang-nm{
+				color: #576B95;
+				font-weight: bold;
+			}.guanzhu-block .block-top .zhubanfang-info{
+				color: #000;
+			}
+			.guanzhu-block .block-bottom{
+				width: 100%;
+				height: 60px;
+				background-color: #fff;
+				border-top: 1px solid #eee;
+			}
+			.guanzhu-block .block-bottom img{
+				width: 30px;
+				height: 30px;
+			}
+			.guanzhu-block .block-bottom .bottom-left{
+				width: 50%;
+				height: 60px;
+				text-align: center;
+				float: left;
+				border-right: 1px solid #eee;
+			}
+			.guanzhu-block .block-bottom .bottom-right{
+				width: 50%;
+				height: 60px;
+				text-align: center;
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">关注的主办方</h1>
+		</header>
+		<div class="mui-content">
+			<p class="top-p">我关注了<span id="num">2</span>个主办方</p>
+			<div class="guanzhu-block">
+				<div class="block-top">
+					<img class="touxiang" src="../images/ang.jpg"/>
+					<img class="dot3" src="../images/dot3.png"/>
+					<p class="zhubanfang-nm">聚蕊烩</p>
+					<p class="zhubanfang-info">网络营销活动策划；游戏娱乐活动策划；品牌管理 及企业形象策划；礼仪庆典活动策划;会务会展服务；礼仪庆典活动策划;会务会展服务；礼仪庆典活动策划;会务会展服务；</p>
+				</div>
+				<div class="block-bottom">
+					<div class="bottom-left">
+						<div class="num-left">
+							<img src="../images/zhubanfang-icon01.png"/>
+							<p class="num-info"><span>10</span>场活动</p>
+						</div>
+					</div>
+					<div class="bottom-right">
+						<div class="num-right">
+							<img src="../images/zhubanfang-icon02.png"/>
+							<p class="num-info"><span>999</span>人报名</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="guanzhu-block">
+				<div class="block-top">
+					<img class="touxiang" src="../images/ang.jpg"/>
+					<img class="dot3" src="../images/dot3.png"/>
+					<p class="zhubanfang-nm">聚蕊烩</p>
+					<p class="zhubanfang-info">TA组织活动太忙，还没腾出空写简介</p>
+				</div>
+				<div class="block-bottom">
+					<div class="bottom-left">
+						<div class="num-left">
+							<img src="../images/zhubanfang-icon01.png"/>
+							<p class="num-info"><span>10</span>场活动</p>
+						</div>
+					</div>
+					<div class="bottom-right">
+						<div class="num-right">
+							<img src="../images/zhubanfang-icon02.png"/>
+							<p class="num-info"><span>999</span>人报名</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<p id="loading-info">已加载全部</p>
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*header*/
+			.mui-bar h1{
+				font-size: 18px;
+				font-family: "黑体";
+				color: #EB8256;
+			}
+			.mui-bar .mui-icon{
+				font-size: 16px !important;
+				margin-top: 5px;
+				color: #EB8256;
+			}
+			.mui-bar .done{
+				background-color: #EB8256;
+				color: #fff;
+				font-size: 10px;
+				padding: 0px 8px;
+				position: relative;
+				top: 12px;
+			}
+		/*上传身份证照片*/
+			.id-pic{
+				height: 200px;
+				background-color: #EB8256;
+				text-align: center;
+			}
+			.id-pic p{
+				color: #fff;
+				padding-top: 10px;
+			}
+			.id-pic .pic-part{
+				width: 320px;
+				height: 150px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.id-pic .pic-part div{
+				width: 45%;
+				height: 150px;
+				background-color: #ED9C7A;
+				border-radius: 5px;
+			}
+			.id-pic .pic-part img{
+				width: 120px;
+				height: 80px;
+				margin-top: 20px;
+			}
+			.id-pic .pic-part #img-front{
+				background: url(../images/id-front.png) center center no-repeat;
+				background-size: 100%;
+			}
+			.id-pic .pic-part #img-back{
+				background: url(../images/id-back.png) center center no-repeat;
+				background-size: 100%;
+			}
+			.id-pic .pic-part .id-front{
+				float: left;
+			}
+			.id-pic .pic-part .id-back{
+				float: right;
+			}
+		
+		/*要求*/
+			.style-p{
+				text-indent: 1em;
+			}
+			.style-p span{
+				color: #EB8256;
+			}
+			.style-p:first{
+				margin-top: 10px;
+			}
+			.example{
+				display: block;
+				background-color: #EFEFF4;
+				position: absolute;
+				text-align: center;
+				width: 80px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+				left: 50%;
+				margin-left: -40px;
+				
+			}
+			.id-card{
+				width: 310px;
+				height: 125px;
+				border: 1px solid #000;
+				border-radius: 3px;
+				margin: 0 auto;
+				padding-left: 0px;
+				text-align: center;
+				margin-top: 25px;
+			}
+			.id-card li{
+				display: inline-block;
+				width: 25%;
+				height: 125px;
+				float: left;
+				position: relative;
+			}
+			.id-card li .id-part{
+				width: 70px;
+				height: 45px;
+				margin-top: 40px;
+			}
+			.id-card li .right-error{
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				bottom: 35px;
+				left: 30px;
+			}
+			.line{
+				width: 94%;
+				border: none;
+				height: 1px;
+				background-color: #D8D8D8;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">身份认证</h1>
+			<a class="mui-pull-right done">保存</a>
+		</header>
+		<div class="mui-content">
+		<!--上传身份证-->
+			<div class="id-pic">
+				<p>请分别上传身份证正面和背面照片</p>
+				<div class="pic-part">
+					<div class="id-front">
+						<img src="" id="img-front"/>
+						<p>上传身份证正面</p>
+					</div>
+					<div class="id-back">
+						<img src="" id="img-back"/>
+						<p>上传身份证背面</p>
+					</div>
+				</div>
+			</div>
+			
+			<p class="style-p" style="margin-top: 10px;">身份证照片要求：</p>
+			<hr class="line"/>
+			<p class="style-p">拍摄时请保证身份证<span>边框完整，字迹清晰，亮度均匀；</span></p>
+			<span class="example">拍照示例</span>
+			<ul class="id-card">
+				<li>
+					<img src="../images/id01.png" class="id-part"/>
+					<img src="../images/right.png" class="right-error"/>
+					<p>标准</p>
+				</li>
+				<li>
+					<img src="../images/id02.png" class="id-part"/>
+					<img src="../images/error.png" class="right-error"/>
+					<p>边框缺失</p>
+				</li>
+				<li>
+					<img src="../images/id03.png" class="id-part"/>
+					<img src="../images/error.png" class="right-error"/>
+					<p>照片模糊</p>
+				</li>
+				<li>
+					<img src="../images/id04.png" class="id-part"/>
+					<img src="../images/error.png" class="right-error"/>
+					<p>闪光强烈</p>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

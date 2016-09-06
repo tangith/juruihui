@@ -1,0 +1,177 @@
+
+
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*选项卡切换*/
+		.mui-slider{
+			background-color: #fff;
+		}
+		.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+			border-bottom: 2px solid;
+		}
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+			color: #EB8256;
+		}
+		/*if-no*/
+		.if-no{
+			width: 200px;
+			text-align: center;
+			margin: 0 auto;
+			padding-top: 60px;
+		}
+		.if-no img{
+			width: 60px;
+			height: 60px;
+		}
+		/*加载信息*/
+			#loading-info{
+				text-align: center;
+				margin-top: 30px;
+				font-size: 12px;
+			}
+	/*活动*/
+			.huodong-block{
+				width: 100%;
+				background-color: #fff;
+				margin-top: 10px;
+			}
+			.huodong-block .block-top{
+				width: 100%;
+				min-height: 80px;
+				position: relative;
+				padding: 10px;
+			}
+			.huodong-block .block-top .pic{
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+			}
+			.huodong-block .block-top .title{
+				color: #000;
+				padding-right: 80px;
+				margin-bottom: 15px;
+			}
+			.huodong-block .block-top .info{
+				position: absolute;
+				bottom: -8px;
+				left: 10px;
+			}
+			.huodong-block .block-bottom{
+				width: 100%;
+				height: 39px;
+				border-top: 1px solid #eee;
+				position: relative;
+			}
+			.huodong-block .block-bottom .tag{
+				position: relative;
+				top: 7px;
+				padding: 0 5px;
+				border-radius: 3px;
+				float: left;
+				margin-left: 5px;
+				font-size: 12px;
+				border: 1px solid;
+			}
+			.huodong-block .block-bottom .green{
+				color: #69CB6E;
+			}
+			.huodong-block .block-bottom .blue{
+				color: #3BCEFD;
+			}
+			.huodong-block .block-bottom .red{
+				color: #EB6877;
+			}
+			.huodong-block .block-bottom .bottom-right{
+				position: absolute;
+				right: 10px;
+				top: 6px;
+				font-size: 12px;
+				color: #8F8F94;
+			}
+			.huodong-block .block-bottom .bottom-right .num{
+				color: #B71414;
+				font-size: 18px;
+				position: relative;
+				top: 2px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">管理活动</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						活动(2)
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						投票
+					</a>	
+				</div>
+			</div>
+	<!--选项卡内容区-->
+			<div id="item1mobile" class="mui-control-content mui-active">
+				<div class="huodong-block">
+					<div class="block-top">
+						<img src="../images/cbd.jpg" class="pic"/>
+						<p class="title">互助邦，跨界/合作/共赢互助邦，跨界/合作/共赢互助邦，跨界/合作/共赢，跨界/合作/共赢，跨界/合作/共赢，跨界/合作/共赢</p>
+						<p class="info">收到1个新报名</p>
+					</div>
+					<div class="block-bottom">
+						<span class="tag green">活动</span>
+						<span class="tag blue">免费</span>
+						<span class="tag red">报名中</span>
+						<span class="bottom-right"><strong class="num">2</strong> 报名</span>
+					</div>
+				</div>
+				<div class="huodong-block">
+					<div class="block-top">
+						<img src="../images/cbd.jpg" class="pic"/>
+						<p class="title">互助邦，跨界/合作/共赢互助邦</p>
+						<p class="info">收到1个新报名</p>
+					</div>
+					<div class="block-bottom">
+						<span class="tag green">活动</span>
+						<span class="tag blue">免费</span>
+						<span class="tag red">报名中</span>
+						<span class="bottom-right"><strong class="num">2</strong> 报名</span>
+					</div>
+				</div>
+				
+				<p id="loading-info">已加载全部</p>
+			</div>
+			<div id="item2mobile" class="mui-control-content">
+				<div class="if-no">
+					<img src="../images/doudou.png"/>
+					<p>您还没有发布投票哦</p>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

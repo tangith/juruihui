@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*header*/
+			.mui-bar{
+				background-color: #EB8256;
+			}
+			.mui-bar h1{
+				font-size: 18px;
+				font-family: "黑体";
+				color: #fff;
+			}
+			.mui-bar .mui-icon{
+				font-size: 16px !important;
+				margin-top: 5px;
+				color: #fff;
+			}
+			.mui-bar .done{
+				background-color: #EFEFF4;
+				color: #000;
+				font-size: 10px;
+				padding: 0px 8px;
+				position: relative;
+				top: 12px;
+			}
+			/*内容部分*/
+			.mui-table-view {
+				margin-top: 20px;
+			}
+			.style-p{
+				font-size: 12px;
+				padding-left: 15px;
+				line-height: 20px;
+				position: relative;
+				top: 10px;
+			}
+			.style-p img{
+				width: 18px;
+				height: 18px;
+				position: relative;
+				top: 5px;
+			}
+			.mui-pull-right{
+				font-style: normal;
+				color: #C4C4C4;
+				font-size: 14px;
+			}
+			.m-right{
+				margin-right: -25px;
+			}
+			.red{
+				color: red;
+			}
+			.huise{
+				color: #7C7C7C;
+			}
+		
+		/*改成的input*/
+			.input{
+				border: none !important;
+				border-bottom: 1px solid #C8C7CC;
+				border-radius: 0px !important;
+				margin-bottom: 0px !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">身份认证</h1>
+			<a class="mui-pull-right done">提交</a>
+		</header>
+		<div class="mui-content">
+			<p class="style-p"><img src="../images/weirenzheng.png"/>为什么要身份认证？</p>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<a href="#gender" class="mui-navigate-right">用户类型<i class="mui-pull-right m-right">企业用户</i></a>
+				</li>
+			</ul>
+			<p class="style-p" style="font-size: 16px;">实名资料（不可更改）</p>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<input type="text" class="mui-input-clear huise input" placeholder="企业名称">
+				<li class="mui-table-view-cell" style="border-top: 1px solid #eee;">
+					<a id="upload-enterprise" class="mui-navigate-right">营业执照副本<i class="mui-pull-right red m-right">去上传</i></a>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<input type="text" class="mui-input-clear huise input" placeholder="企业联系人姓名">
+				<li class="mui-table-view-cell" style="border-top: 1px solid #eee;">
+					<a id="identity-v" class="mui-navigate-right">证件类型<i class="mui-pull-right red m-right">去上传</i></a>
+				</li>
+			</ul>
+			<p class="style-p">说明：<br/>1.证件照片要求清晰可见，才能通过审核；<br/>2.证件照片只用于身份认证，不会用于其他用途，请放心上传。</p>
+				
+			
+			
+			
+			
+			
+			
+	<!--用户类型-->
+		<div id="gender" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell actionsheet">
+					<a id="shenfen-geren">我是个人用户</a>
+				</li>
+				<li class="mui-table-view-cell actionsheet">
+					<a>我是企业用户</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell actionsheet-btn">
+					<a href="#gender"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+//			打开个人认证页面
+			document.getElementById('shenfen-geren').addEventListener('tap',function(){
+				mui('.mui-popover').popover('hide');
+				mui.openWindow({
+					url:'shenfen-geren.html',
+					id:'shenfen-geren',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+			
+//			打开上传营业执照副本页面
+			document.getElementById('upload-enterprise').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'upload-enterprise.html',
+					id:'upload-enterprise',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开上传身份证页面
+			document.getElementById('identity-v').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'identity-v.html',
+					id:'identity-v',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

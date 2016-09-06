@@ -55,7 +55,7 @@
 			}
 			.two_inner:active{
 				background-color: #e44f61;
-				}
+			}
 			.three{
 				height: 50%;
 				width: 100%;
@@ -208,7 +208,7 @@
 		   <div class="onetwothree">
 		   		<div class="twothree">
 		   			<div class="two">
-		   				<a class="two_inner" href="listpage.html">
+		   				<a class="two_inner" id="huodong">
 		   					<div class="horizontal_m">
 								<img src="../images/huodong.png"/>
 								<span>
@@ -218,7 +218,7 @@
 						</a>
 		   			</div>
 		   			<div class="three">
-		   				<a class="three_inner" href="listpage.html">
+		   				<a class="three_inner" id="juwan">
 			   				<div class="horizontal_m">
 								<img src="../images/juwan.png"/>
 								<span>
@@ -229,7 +229,7 @@
 		   			</div>
 		   		</div>
 		   		<div class="one">
-		   			<a class="one_inner" href="listpage.html">
+		   			<a class="one_inner" id="ruike">
 		   				<div class="vertical">
 		   					<img src="../images/ruike.png"/>
 		   					<span>
@@ -240,7 +240,7 @@
 		   		</div>
 		   </div>
 		   <div class="four">
-		   		<a class="four_inner" href="listpage.html">
+		   		<a class="four_inner" id="dingzhi">
 					<div class="horizontal">
 						<img src="../images/sirendingzhi.png"/>
 						<span>
@@ -251,7 +251,7 @@
 		   </div>
 		   <div class="fivesix">
 				<div class="five">
-					<a class="five_inner" href="listpage.html">
+					<a class="five_inner" id="zhongchou">
 						<div class="vertical">
 		   					<img src="../images/huodongzhongchou.png"/>
 		   					<span>
@@ -261,7 +261,7 @@
 		   			</a>
 				</div>
 				<div class="six">
-					<a class="six_inner" href="listpage.html">
+					<a class="six_inner" id="shouquan">
 						<div class="vertical">
 		   					<img src="../images/huodongshouquan.png"/>
 		   					<span>
@@ -273,7 +273,7 @@
 		   </div>
 		   <div class="seveneight">
 		   		<div class="seven">
-		   			<a class="seven_inner" href="listpage.html">
+		   			<a class="seven_inner" id="fenxiang">
 						<div class="vertical">
 		   					<img src="../images/huodongfenxiang.png"/>
 		   					<span>
@@ -320,6 +320,97 @@
 					});
 					return;
 				}
+			});
+		
+		
+//			打开蕊客列表页面
+			document.getElementById('ruike').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'listpage.html',
+					id:'list-page',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开活动列表页面
+			document.getElementById('huodong').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'listpage.html',
+					id:'list-page',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开聚玩列表页面
+			document.getElementById('juwan').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'listpage.html',
+					id:'list-page',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开私人订制列表页面
+			document.getElementById('dingzhi').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'listpage.html',
+					id:'list-page',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开活动行众筹列表页面
+			document.getElementById('zhongchou').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'listpage.html',
+					id:'list-page',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开活动授权列表页面
+			document.getElementById('shouquan').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'listpage.html',
+					id:'list-page',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开活动分享列表页面
+			document.getElementById('fenxiang').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'listpage.html',
+					id:'list-page',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开社区页面
+			document.getElementById('eight_inner').addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'listpage.html',
+//					id:'list-page',
+//					show: {
+//						aniShow: 'slide-in-right',
+//						duration: 300
+//					}
+//				});
+				window.alert("开发中...");
 			});
 		</script>
 	</body>

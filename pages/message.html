@@ -16,6 +16,9 @@
 				padding-bottom: 0px;
 				position: relative;
 			}
+			.mui-content a:active{
+				background-color: #D8D8D8;
+			}
 			.mui-content a:first-child{
 				margin-top: 30px;
 			}
@@ -50,25 +53,25 @@
 
 	<body>
 		<div class="mui-content">
-		    <a>
+		    <a id="pinglun">
 		    	<img src="../images/comments.png"/>
 		    	<span class="news"></span>
 		    	<span>评论和赞</span>
 		    	<img src="../images/joined_more.png"/>
 		    </a>
-		    <a>
+		    <a id="activity_remind">
 		    	<img src="../images/activity_remind.png"/>
 		    	<span class="news"></span>
 		    	<span>活动提醒</span>
 		    	<img src="../images/joined_more.png"/>
 		    </a>
-		    <a>
+		    <a id="xitongxiaoxi">
 		    	<img src="../images/system_message.png"/>
 		    	<span class="news"></span>
 		    	<span>系统消息</span>
 		    	<img src="../images/joined_more.png"/>
 		    </a>
-		    <a>
+		    <a id="guanfangtongzhi">
 		    	<img src="../images/official_message.png"/>
 		    	<span class="news"></span>
 		    	<span>官方通知</span>
@@ -80,7 +83,55 @@
 		
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			
+			
+			
+//			打开评论和赞页面
+			document.getElementById('pinglun').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'activity_remind.html',
+					id:'activity_remind',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+			
+//			打开活动提醒页面
+			document.getElementById('activity_remind').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'activity_remind.html',
+					id:'activity_remind',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开系统消息页面
+			document.getElementById('xitongxiaoxi').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'activity_remind.html',
+					id:'activity_remind',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开官方通知页面
+			document.getElementById('guanfangtongzhi').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'activity_remind.html',
+					id:'activity_remind',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
 		</script>
 	</body>
 

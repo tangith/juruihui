@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		#share{
+			display: block;
+			width: 20px;
+			height: 20px;
+			background: url(../images/share.png) center center no-repeat;
+			background-size: 20px;
+			position: absolute;
+			right: 15px;
+			top: 10px;
+		}
+		/*头像部分*/
+		.top{
+			width: 100%;
+			height: 185px;
+			text-align: center;
+			background: url(../images/cbd.jpg) center center no-repeat;
+			background-size: 100% 100%;
+		}
+		.top img{
+			width: 60px;
+			height: 60px;
+			margin-top: 20px;
+			border-radius: 100%;
+			box-shadow: 0 4px 8px #000;
+			margin-bottom: 5px;
+		}
+		.top p{
+			color: #fff;
+		}
+		.top #my-name{
+			font-size: 18px;
+		}
+		/*发活动*/
+		.faqihuodong{
+			width: 100%;
+			height: 120px;
+			background-color: #fff;
+			border-left: 3px solid #EB8256;
+			position: relative;
+		}
+		.faqihuodong .when{
+			color: #000;
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+		.faqihuodong .faqi-p{
+			color: #000;
+			top: 50px;
+			left: 60px;
+			position: absolute;
+		}
+		.faqihuodong #faqi-icon{
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: url(../images/add.png) center center no-repeat;
+			position: absolute;
+			background-size: 30px;
+			top: 44px;
+			left: 11px;
+		}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<h1 class="mui-title">个人主页</h1>
+			<a id="share"></a>
+		</header>
+		<div class="mui-content">
+			<div class="top">
+				<img src="../images/ang.jpg"/>
+				<p id="my-name">西瓜不甜</p>
+				<p><span>0</span>场活动&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>0</span>人参与</p>
+				<p>TA组织活动太忙了，还没腾出空写简介</p>
+			</div>
+			<div class="faqihuodong">
+				<span class="when">今天</span>
+				<p class="faqi-p">发起一个活动，开始召集你的好友</p>
+				<a id="faqi-icon"></a>
+			</div>
+		</div>
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

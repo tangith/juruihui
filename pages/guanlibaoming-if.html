@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*加载信息*/
+			#loading-info{
+				text-align: center;
+				margin-top: 30px;
+				font-size: 12px;
+			}
+
+		/*报名的人*/
+			.people-block{
+				width: 98%;
+				padding: 10px;
+				background-color: #fff;
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+			.people-block .block-top{
+				width: 100%;
+				height: 50px;
+				position: relative;
+			}
+			.people-block .block-top .touxiang{
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				border-radius: 100%;
+			}
+			.people-block .block-top p{
+				padding: 0 60px;
+			}
+			.people-block .block-top .name{
+				color: #000;
+			}
+			.people-block .block-top .first-info{
+				font-size: 12px;
+			}
+			.people-block .block-top span{
+				position: absolute;
+				right: 5px;
+				color: #8F8F94;
+				font-size: 12px;
+			}
+			.people-block .block-top .done{
+				top: 0px;
+			}
+			.people-block .block-top .free{
+				bottom: 0px;
+			}
+			.people-block .block-bottom{
+				width: 100%;
+				min-height: 30px;
+				position: relative;
+				border-top: 1px solid #eee;
+				margin-top: 10px;
+			}
+			.people-block .block-bottom .date{
+				position: absolute;
+				left: 5px;
+				color: #8F8F94;
+				top: 10px;
+			}
+			.people-block .block-bottom .title{
+				padding-left: 60px;
+				line-height: 30px;
+				color: #000;
+				position: relative;
+				top: 4px;
+				margin-bottom: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">管理报名</h1>
+		</header>
+		<div class="mui-content">
+			<div class="people-block">
+				<div class="block-top">
+					<img class="touxiang" src="../images/ang.jpg"/>
+					<p class="name">聚蕊烩</p>
+					<p class="first-info">首次参加我的活动</p>
+					<span class="done">已报名</span>
+					<span class="free">免费</span>
+				</div>
+				<div class="block-bottom">
+					<span class="date">9月2日</span>
+					<p class="title">互助邦，跨界/合作/共赢首次参加我的活动首次参加我的活动首次参加我的活动首次参加我的活动首次参加我的活动</p>
+				</div>
+			</div>
+			<div class="people-block">
+				<div class="block-top">
+					<img class="touxiang" src="../images/ang.jpg"/>
+					<p class="name">聚蕊烩</p>
+					<p class="first-info">首次参加我的活动</p>
+					<span class="done">已报名</span>
+					<span class="free">免费</span>
+				</div>
+				<div class="block-bottom">
+					<span class="date">9月2日</span>
+					<p class="title">互助邦，跨界/合作/共赢</p>
+				</div>
+			</div>
+
+			
+			<p id="loading-info">已加载全部</p>
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

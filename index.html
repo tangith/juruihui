@@ -62,7 +62,7 @@
 	<header class="mui-bar mui-bar-nav">
 		<a id="position">武汉</a>
 		<img class="logo_font" src="images/logo-font-fff.png" />
-		<img class="search" src="images/sousuo.png"/>
+		<img class="search" src="images/sousuo.png" id="search"/>
 	</header>
 	<nav class="mui-bar mui-bar-tab">
 		<a id="defaultTab" class="mui-tab-item mui-active" href="pages/eight.html">
@@ -127,7 +127,15 @@
 						mui.extend(aniShow,temp);
 					}
 					self.append(sub);
-				}
+				};
+				
+				
+				
+//				document.getElementById('search').addEventListener('tap',function(){
+//
+//				var sub2 = plus.webview.create(subpages[1], subpages[1], subpage_style);
+//					self.append(sub2);
+//				});
 			});
 			 //当前激活选项
 			var activeTab = subpages[0];
@@ -175,8 +183,23 @@
 			document.getElementById('position').addEventListener('tap',function(){
 				mui.openWindow({
 					url:'pages/position_choose.html',
-					id:'position'
+					id:'position',
+					show: {
+						aniShow: 'slide-in-left',
+						duration: 300
+					}
 				});
+			});
+//			点击右上角的搜索图标事件
+			document.getElementById('search').addEventListener('tap',function(){
+//				mui.openWindow({
+//					url:'pages/position_choose.html',
+//					id:'position',
+//					show: {
+//						aniShow: 'slide-in-left',
+//						duration: 300
+//					}
+//				});
 			});
    </script>
 </body>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*块级按钮*/
+		.btn-block{
+			display: block;
+			width: 95%;
+			height: 40px;
+			margin: 10px auto;
+			border-radius: 3px;
+			text-align: center;
+			line-height: 40px;
+			text-decoration: none;
+		}
+		.btn-block:hover{
+			text-decoration: none;
+		}
+		#tixian{
+			background-color: #EB8256;
+			color: #fff;
+		}
+		#tixian:active{
+			background-color: #cd724c;
+		}
+		#zhangdan{
+			background-color: #C4C4C4;
+			color: #000;
+		}
+		#zhangdan:active{
+			background-color: #a9a9a9;
+		}
+		/*提现部分*/
+		.income{
+			width: 100%;
+			height: 200px;
+			background-color: #fff;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.p-style{
+			color: #000;
+			padding-top: 20px;
+		}
+		#num{
+			color: #EB8256;
+			font-size: 32px;
+			padding-top: 15px;
+		}
+		.income-num{
+			width: 100%;
+			height: 40px;
+			padding-top: 30px;
+		}
+		.income-num div{
+			display: inline-block;
+			width: 32%;
+			height: 40px;
+			text-align: center;
+		}
+		.income-num div span{
+			display: block;
+		}
+		.border-lf{
+			border-right: 1px solid #000;
+			border-left: 1px solid #000;
+		}
+		
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">活动收入</h1>
+		</header>
+		<div class="mui-content">
+			<div class="income">
+				<p class="p-style">可提现金额（元）</p>
+				<p id="num">0.00</p>
+				<div class="income-num">
+					<div>
+						<span>总收入</span>
+						<span id="">0.00</span>
+					</div>
+					<div class="border-lf">
+						<span>未确认</span>
+						<span id="">0.00</span>
+					</div>
+					<div>
+						<span>提现中</span>
+						<span id="">0.00</span>
+					</div>
+				</div>
+			</div>
+			<a class="btn-block" id="tixian" data-toggle="modal" data-target="#myModal">我要提现</a>
+			<a class="btn-block" id="zhangdan">查看历史账单</a>
+			
+			
+			
+			
+			
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="margin-top: 200px;">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>为了您账户资金安全，请进行身份认证，身份认证通过后，即可设置您本人的收款账户进行提现。</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" style="background-color: #EB8256; border-color: #EB8256;width: 100%;" id="shenfen-geren">立即去认证</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+		</div>
+		
+		
+		
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../js/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			
+			
+//			打开身份认证页面
+			document.getElementById('shenfen-geren').addEventListener('tap',function(){
+				$('#myModal').modal('hide');
+				mui.openWindow({
+					url:'shenfen-geren.html',
+					id:'shenfen-geren',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开历史账单页面
+			document.getElementById('zhangdan').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'zhangdan.html',
+					id:'zhangdan',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

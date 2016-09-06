@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*if-no*/
+		.if-no{
+			width: 200px;
+			text-align: center;
+			margin: 0 auto;
+			padding-top: 80px;
+		}
+		.if-no img{
+			width: 60px;
+			height: 60px;
+		}
+		/*短信包明细*/
+		.table{
+			width: 100%;
+			height: 100px;
+			margin-top: 15px;
+		}
+		.table .table-l{
+			width: 33.333%;
+			height: 100px;
+			background-color: #fff;
+			border-right: 2px solid #efeff4;
+			position: relative;
+		}
+		.table .table-r{
+			width: 66.666%;
+			height: 100px;
+		}
+		.table .table-r .table-rt{
+			width: 100%;
+			height: 50%;
+			background-color: #fff;
+			border-bottom: 1px solid #efeff4;
+		}
+		.table .table-r .table-rb{
+			width: 100%;
+			height: 50%;
+			background-color: #fff;
+			border-top: 1px solid #efeff4;
+		}
+		.table-style{
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			text-align: center;
+			line-height: 50px;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		.sms{
+			position: absolute;
+			bottom: 15px;
+			right: 25px;
+			color: #EB8256;
+		}
+		.sms span{
+			font-size: 25px;
+		}
+		/*购买短信包*/
+		.buy{
+			display: block;
+			width: 75px;
+			height: 25px;
+			background-color: #EB8256;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			line-height: 25px;
+			border-radius: 3px;
+			position: absolute;
+			right: 10px;
+			top: 180px;
+		}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">短信包</h1>
+		</header>
+		<div class="mui-content">
+			<div class="table">
+				<div class="table-l left">
+					<span class="table-style" style="width: 100%;">短信包余额</span>
+					<b class="sms"><span>0</span>条</b>
+				</div>
+				<div class="table-r right">
+					<div class="table-rt">
+						<span class="table-style left">累计充值</span>
+						<span class="table-style right">0条</span>
+					</div>
+					<div class="table-rb">
+						<span class="table-style left">累计使用</span>
+						<span class="table-style right">0条</span>
+					</div>
+				</div>
+			</div>
+			<a class="buy">购买短信包</a>
+			<div class="if-no">
+				<img src="../images/doudou.png"/>
+				<p>您还没有短信使用记录哦</p>
+			</div>
+		</div>
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

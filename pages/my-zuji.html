@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*header*/
+			.mui-bar{
+				background-color: #EB8256;
+			}
+			.mui-bar h1{
+				font-size: 18px;
+				font-family: "黑体";
+				color: #fff;
+			}
+			.mui-bar .mui-icon{
+				font-size: 16px !important;
+				margin-top: 5px;
+				color: #fff;
+			}
+		/*加载信息*/
+			#loading-info{
+				text-align: center;
+				margin-top: 30px;
+				font-size: 12px;
+			}
+		/*时间线*/
+			.time-line{
+				height: auto;
+				min-height: 80px;
+				border-left: 1px solid #EB8256;
+				margin-left: 50px;
+				margin-top: -10px;
+				position: relative;
+			}
+			.time-line p{
+				text-indent: 1em;
+				color: #000;
+			}
+			.time-line:first-child{
+				margin-top: 20px;
+			}
+			.time-line .dot{
+				position: absolute;
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius: 100%;
+				background-color: #eb8256;
+				left: -5px;
+			}
+			.time-line .time{
+				position: relative;
+				top: -4px;
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">我的足迹</h1>
+		</header>
+		<div class="mui-content">
+			<div class="time-line">
+				<span class="dot"></span>
+				<p class="time">2016年8月21日</p>
+				<p>开启聚蕊烩之旅</p>
+			</div>
+			<div class="time-line">
+				<span class="dot"></span>
+				<p class="time">2016年8月22日</p>
+				<p>欢迎加入武汉影视圈</p>
+			</div>
+			<div class="time-line">
+				<span class="dot"></span>
+				<p class="time">2016年8月23日</p>
+				<p>嘴张大点，软妹给你喂酒</p>
+			</div>
+			<div class="time-line">
+				<span class="dot"></span>
+				<p class="time">2016年8月24日</p>
+				<p>关于创业武汉·第六期青创营学员招募</p>
+			</div>
+			<p id="loading-info">已加载全部</p>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*加载信息*/
+			#loading-info{
+				text-align: center;
+				margin-top: 30px;
+				font-size: 12px;
+			}
+		/*我关注了几个主办方*/
+		.top-p{
+			color: #7C7C7C;
+			padding-top: 10px;
+			text-indent: 10px;
+		}
+		.top-p span{
+			font-size: 24px;
+			color: #000;
+		}
+		/*我的粉丝-block*/
+			.fensi-block{
+				width: 98%;
+				height: 60px;
+				background-color: #fff;
+				padding: 10px;
+				position: relative;
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}
+			.fensi-block .touxiang{
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+			.fensi-block p{
+				padding-left: 60px;
+			}
+			.fensi-block .info-top{
+				color: #000;
+			}
+			.fensi-block .info-buttom{
+				position: relative;
+				top: -5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">我的粉丝</h1>
+		</header>
+		<div class="mui-content">
+			<p class="top-p">共有<span id="num">2</span>人关注了我</p>
+			<div class="fensi-block">
+				<img src="../images/ang.jpg" class="touxiang"/>
+				<p class="info-top">聚蕊烩</p>
+				<p class="info-buttom">9月2日关注了我</p>
+			</div>
+			<div class="fensi-block">
+				<img src="../images/ang.jpg" class="touxiang"/>
+				<p class="info-top">聚蕊烩</p>
+				<p class="info-buttom">9月2日关注了我</p>
+			</div>
+
+			
+			<p id="loading-info">已加载全部</p>
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

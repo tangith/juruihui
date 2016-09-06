@@ -3,43 +3,339 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>聚蕊烩</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<!--标准mui.css-->
 		<link rel="stylesheet" href="../css/mui.min.css">
-		<!--App自定义的css-->
-		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.update {
+				font-style: normal;
+				color: #999999;
+				margin-right: 22px;
+				font-size: 12px
+			}
+			.mui-table-view .mui-table-view-cell:first-child {
+				margin-top: 15px;
+			}
+			.indent{
+				text-indent: 30px;
+			}
+			.mui-table-view-cell img{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: 15px;
+			}
+			.mui-table-view .banner{
+				background: url(../images/my_banner.png) center center no-repeat;
+				background-size: 100%;
+			}
+			.table-view-cell .my_num{
+				display: inline-block !important;
+				width: 32%;
+				height: 60px;
+				margin: 0px !important;
+				text-align: center;
+				font-size: 13px;
+				box-sizing: border-box;
+			}
+			.table-view-cell .my_num .num_block span{
+				display: block;
+				padding-top: 10px;
+			}
+			.table-view-cell a{
+				color: #000;
+			}
+			.table-view-cell a:active{
+				background-color: #EEE;
+			}
+			.border-lf{
+				border-right: 1px solid #ccc;
+				border-left: 1px solid #CCC;
+			}
+
+
+		/*header*/
+			.mui-bar{
+				background-color: #EB8256;
+				text-align: center;
+			}
+			.mui-bar-nav a:active{
+				color: #EB8256;
+			}
+			.mui-bar-nav{
+				box-shadow: 0 1px 6px #EB8256;
+				-webkit-box-shadow: 0 1px 6px #EB8256;
+			}
+			#setting{
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: url(../images/setting_icon.png) center center no-repeat;
+				background-size: 20px;
+				position: absolute;
+				top: 12px;
+				right: 12px;
+			}
+			.my_btn{
+				display: inline-block;
+				width: 60px;
+				height: 25px;
+				background-color: #F5C1AB;
+				font-family: "黑体";
+				text-align: center;
+				margin: 0 auto;
+				line-height: 25px;
+				font-size: 14px;
+				position: relative;
+				top: 10px;			}
+			.my_btn_l{
+				background-color: #fff;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+			.my_btn_r{
+				background-color: #F5C1AB;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+			
+			/*头像展示部分*/
+			.top-head{
+				width: 100%;
+				height: 150px;
+				text-align: center;
+				color: #fff;
+				background-color: #EB8256;
+				padding-top: 10px;
+				margin-bottom: 15px;
+			}
+			.top-head .my-pic{
+				width: 60px;
+				height: 60px;
+				border-radius: 100%;
+				box-shadow: 0 4px 8px #000;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.top-head .my-pic img{
+				width: 60px;
+				height: 60px;
+			}
+			.top-head .my-pic .change{
+				position: absolute;
+				display: block;
+				width: 80px;
+				bottom: 0px;
+				font-size: 10px;
+				background: rgba(0,0,0,0.4);
+				right: -10px;
+			}
+			#my-name{
+				color: #fff;
+				padding-top: 10px;
+				height: 30px;
+			}
+			#login{
+				border: 1px solid #fff;
+				display: block;
+				width: 55px;
+				height: 20px;
+				color: #fff;
+				font-size: 10px;
+				line-height: 20px;
+				margin: 0 auto;
+				border-radius: 3px;
+			}
+			
+			
+			.table-view-cell{
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+			}
+		</style>
 	</head>
+
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-icon mui-icon-left-nav mui-pull-left" href="javascript:back();"></a>
-			<h1 class="mui-title">Typography</h1>
+			<a class="my_btn my_btn_l">参与者</a><a class="my_btn my_btn_r" href="my02.html">主办方</a>
+	  		<a class="mui-pull-right" id="setting"></a>
 		</header>
 		<div class="mui-content">
-			<div class="mui-content-padded">
-				<h1>h1. Heading</h1>
-				<h2>h2. Heading</h2>
-				<h3>h3. Heading</h3>
-				<h4>h4. Heading</h4>
-				<h5>h5. Heading</h5>
-				<h6>h6. Heading</h6>
-				<p>
-					p. 目前最接近原生App效果的框架。
-				</p>
+			<div class="top-head">
+				<div class="my-pic" id="my_some">
+					<span class="change">修改</span>
+					<img src="../images/my_pic.png"/>
+				</div>
+				<p id="my-name">西瓜不甜</p>
+				<p id="login">QQ登录</p>
 			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id="quanbupingzheng">
+						我的活动<i class="mui-pull-right update">查看全部电子凭证</i>
+					</a>
+				</li>
+				<li class="table-view-cell" style="height: 80px;width: 100%;">
+					<a class="my_num" id="daifukuan">
+						<div class="num_block">
+							<span>0</span>待付款
+						</div>
+					</a>
+					<a class="my_num border-lf" id="daicanyu">
+						<div class="num_block">
+							<span>0</span>待参与
+						</div>
+					</a>
+					<a class="my_num" id="yiwancheng">
+						<div class="num_block">
+							<span>0</span>已完成
+						</div>
+					</a>
+				</li>
+			</ul>
+		    <ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right indent" id="shoucang">
+						<img src="../images/collected.png"/>
+						收藏的活动
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right indent" id="guanzhu-zhubanfang">
+						<img src="../images/guanzhu.png"/>
+						关注的主办方
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right indent" id="my-zuji">
+						<img src="../images/zhuji.png"/>
+						我的足迹
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell banner" style="height: 100px;"></li>
+			</ul>
 		</div>
+
+
+
+
+
+
+
 	</body>
-	<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.min.js "></script>
 	<script>
-		mui.init({
-			swipeBack:true //启用右滑关闭功能
-		});
-		function back(){
-				history.back();
-		};
-		
+	
+	
+	
+	
+//			打开setting页面
+			document.getElementById('setting').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'setting.html',
+					id:'setting',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+			
+//			打开个人资料页面
+			document.getElementById('my_some').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'personal_data.html',
+					id:'personal_data',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开我的足迹页面
+			document.getElementById('my-zuji').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'my-zuji.html',
+					id:'my-zuji',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开全部凭证页面
+			document.getElementById('quanbupingzheng').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'quanbupingzheng-if.html',
+					id:'quanbupingzheng0-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开关注的主办方页面
+			document.getElementById('guanzhu-zhubanfang').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'guanzhu-zhubanfang-if.html',
+					id:'guanzhu-zhubanfang-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开收藏页面
+			document.getElementById('shoucang').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'shoucang-if.html',
+					id:'shoucang-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开已完成页面
+			document.getElementById('yiwancheng').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'yiwancheng-if.html',
+					id:'yiwancheng-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开待参与页面
+			document.getElementById('daicanyu').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'daicanyu-if.html',
+					id:'daicanyu-if',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+//			打开待付款页面
+			document.getElementById('daifukuan').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'daifukuan.html',
+					id:'daifukuan',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
 	</script>
+
 </html>

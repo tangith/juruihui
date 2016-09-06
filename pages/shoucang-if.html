@@ -1,0 +1,154 @@
+
+
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*加载信息*/
+			#loading-info{
+				text-align: center;
+				margin-top: 30px;
+				font-size: 12px;
+			}
+		/*选项卡切换*/
+		.mui-slider{
+			background-color: #fff;
+		}
+		.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+			border-bottom: 2px solid;
+		}
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+			color: #EB8256;
+		}
+		/*if-no*/
+		.if-no{
+			width: 200px;
+			text-align: center;
+			margin: 0 auto;
+			padding-top: 60px;
+		}
+		.if-no img{
+			width: 60px;
+			height: 60px;
+		}
+		/*活动*/
+			.top-p{
+				color: #7C7C7C;
+				padding-top: 10px;
+				text-indent: 10px;
+			}
+			.dot3{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+			.huodong-block{
+				width: 100%;
+				min-height: 100px;
+				background-color: #fff;
+				position: relative;
+				margin-bottom: 10px;
+			}
+			.huodong-block .pic{
+				width: 80px;
+				height: 60px;
+				position: absolute;
+				margin-left: 15px;
+				top: 50%;
+				margin-top: -30px;
+			}
+			.huodong-block .title{
+				padding-left: 120px;
+				padding: 10px 10px 40px 120px;
+				color: #000;
+			}
+			.huodong-block .tag{
+				position: absolute;
+				border: 1px solid;
+				padding: 0 5px;
+				bottom: 10px;
+				left: 120px;
+				font-size: 12px;
+				border-radius: 3px;
+			}
+			.red{
+				color: #EB6877;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">收藏的活动</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						活动
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						文章
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						投票
+					</a>
+				</div>
+			</div>
+	<!--选项卡内容区-->
+			<div id="item1mobile" class="mui-control-content mui-active">
+				<p class="top-p">共收藏了<span id="num">2</span>个活动</p>
+				<div class="huodong-block">
+					<img src="../images/cbd.jpg" class="pic"/>
+					<p class="title">互助邦，跨界/合作/共赢互助邦</p>
+					<span class="tag red">报名中</span>
+					<img class="dot3" src="../images/dot3.png"/>
+				</div>
+				<div class="huodong-block">
+					<img src="../images/cbd.jpg" class="pic"/>
+					<p class="title">互助邦，跨界/合作/共赢互助邦互助邦，跨界/合作/共赢互助邦互助邦，跨界/合作/共赢互助邦互助邦，跨界/合作/共赢互助邦互助邦，跨界/合作/共赢互助邦互助邦，跨界/合作/共赢互助邦互助邦，跨界/合作/共赢互助邦</p>
+					<span class="tag red">报名中</span>
+					<img class="dot3" src="../images/dot3.png"/>
+				</div>
+				
+				
+				
+				
+				<p id="loading-info">已加载全部</p>
+			</div>
+			<div id="item2mobile" class="mui-control-content">
+				<div class="if-no">
+					<img src="../images/doudou.png"/>
+					<p>您还没有收藏任何文章</p>
+				</div>
+			</div>
+			<div id="item3mobile" class="mui-control-content">
+				<div class="if-no">
+					<img src="../images/doudou.png"/>
+					<p>您还没有收藏任何投票</p>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

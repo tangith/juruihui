@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+		/*header*/
+			.mui-bar h1{
+				font-size: 18px;
+				font-family: "黑体";
+				color: #EB8256;
+			}
+			.mui-bar .mui-icon{
+				font-size: 16px !important;
+				margin-top: 5px;
+				color: #EB8256;
+			}
+			.mui-bar .done{
+				background-color: #EB8256;
+				color: #fff;
+				font-size: 10px;
+				padding: 0px 8px;
+				position: relative;
+				top: 12px;
+			}
+		/*上传身份证照片*/
+			.id-pic{
+				height: 300px;
+				background-color: #EB8256;
+				text-align: center;
+			}
+			.id-pic p{
+				color: #fff;
+				padding-top: 10px;
+			}
+
+			.id-pic div{
+				width: 45%;
+				height: 150px;
+				background-color: #ED9C7A;
+				border-radius: 5px;
+			}
+			.id-pic img{
+				width: 80%;
+				height: 80%;
+				margin-top: 20px;
+			}
+			.id-pic #img-front{
+				background: url(../images/enterprise.png) center center no-repeat;
+				background-size: 100%;
+			}
+
+			.id-pic .id-front{
+				width: 160px;
+				height: 240px;
+				background-color: #ED9C7A;
+				margin: 0 auto;
+			}
+
+		
+		/*要求*/
+			.style-p{
+				text-indent: 1em;
+			}
+			.style-p span{
+				color: #EB8256;
+			}
+			.style-p:first{
+				margin-top: 10px;
+			}
+			.line{
+				width: 94%;
+				border: none;
+				height: 1px;
+				background-color: #D8D8D8;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">身份认证</h1>
+			<a class="mui-pull-right done">保存</a>
+		</header>
+		<div class="mui-content">
+		<!--上传身份证-->
+			<div class="id-pic">
+				<p>请上传营业执照副本照片</p>
+				<div class="id-front">
+					<img src="" id="img-front"/>
+				</div>
+			</div>
+			
+			<p class="style-p" style="margin-top: 10px;">营业执照副本照片要求：</p>
+			<hr class="line"/>
+			<p class="style-p">1.为了提高照片识别度，请<span>竖向拍摄</span>。</p>
+			<p class="style-p">2.照片确保<span>边框完整，字迹清晰，亮度均匀</span>；</p>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

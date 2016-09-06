@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*加载信息*/
+			#loading-info{
+				text-align: center;
+				margin-top: 30px;
+				font-size: 12px;
+			}
+	/*待参加的活动-块*/
+		.canyu-block{
+			width: 100%;
+			height: 210px;
+		}
+		.canyu-block .time{
+			color: #7C7C7C;
+			padding-top: 10px;
+			text-indent: 10px;
+		}
+		.canyu-block .block-top{
+			width: 100%;
+			height: 120px;
+			position: relative;
+			background-color: #fff;
+			padding: 10px;
+		}
+		.canyu-block .block-top img{
+			width: 120px;
+			height: 100px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		.canyu-block .block-top .title{
+			position: absolute;
+			top: 10px;
+			left: 140px;
+			color: #000;
+		}
+		.canyu-block .block-top .free{
+			position: absolute;
+			color: #7c7c7c;
+			top: 90px;
+			left: 140px;
+		}
+		.canyu-block .block-top .free-num{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			color: #EB8256;
+			font-size: 24px;
+		}
+		.canyu-block .block-top .free-num i{
+			padding-left: 5px;
+			font-style: normal;
+		}
+		.canyu-block .block-bottom{
+			width: 100%;
+			height: 50px;
+			background-color: #fff;
+			border-top: 1px solid #EEE;
+			position: relative;
+		}
+		.canyu-block .block-bottom span{
+			line-height: 50px;
+			padding-left: 10px;
+			color: #7C7C7C;
+		}
+		.canyu-block .block-bottom .done{
+			color: #000;
+			position: absolute;
+			right: 5px;
+		}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<h1 class="mui-title">全部凭证</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="canyu-block">
+		    	<p class="time">2016-09-01 11:34 报名了该活动</p>
+		    	<div class="block-top">
+		    		<p class="title">网络营销活动策划；游戏娱乐活动策划；网络营销活动策划；游戏娱乐活动策划；</p>
+		    		<img src="../images/cbd.jpg"/>
+		    		<span class="free">免费</span>
+		    		<span class="free-num">¥<i>0</i></span>
+		    	</div>
+		    	<div class="block-bottom">
+		    		<span>活动已结束</span>
+		    		<span class="done">已参与活动</span>
+		    	</div>
+		    </div>
+		    <div class="canyu-block">
+		    	<p class="time">2016-09-01 11:34 报名了该活动</p>
+		    	<div class="block-top">
+		    		<p class="title">互助邦，跨界/合作/共赢</p>
+		    		<img src="../images/cbd.jpg"/>
+		    		<span class="free">免费</span>
+		    		<span class="free-num">¥<i>0</i></span>
+		    	</div>
+		    	<div class="block-bottom">
+		    		<span>活动已结束</span>
+		    		<span class="done">已参与活动</span>
+		    	</div>
+		    </div>
+		    
+		    
+		    <p id="loading-info">已加载全部</p>
+		    
+		    
+		    
+		    
+
+		</div>
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

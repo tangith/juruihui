@@ -6,6 +6,8 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+		<!--弹出日历选择-->
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
 		<style type="text/css">
 		/*header*/
 			.mui-bar h1{
@@ -25,10 +27,10 @@
 				margin-left: 5px;
 				text-align: center;
 				margin-top: 12px !important;
-			}
-			.fabu{
-				background-color: #c4c4c4;
-				color: #4c4c4c;
+				position: absolute;
+				left: 115px;
+				font-style: normal;
+				top: -2px;
 			}
 		
 		
@@ -40,6 +42,7 @@
 				background-color: #C4C4C4;
 				position: fixed;
 				top: 44px;
+				z-index: 1;
 			}
 			.remind-bar p{
 				color: #333;
@@ -97,6 +100,26 @@
 			.mui-table-view:before{
 				height: 0;
 			}
+		/*下面的两个按钮*/
+			.bottom-btn{
+				width: 300px;
+				height: 35px;
+				margin: 20px auto;
+				text-align: center;
+			}
+			.bottom-btn a{
+				display: inline-block;
+				width: 120px;
+				height: 35px;
+				line-height: 35px;
+				color: #fff;
+				background-color: #EB8256;
+				border-radius: 3px;
+			}
+			.bottom-btn a:active{
+				background-color: #cd724c;
+			}
+			/*活动主题形式*/
 		</style>
 	</head>
 
@@ -104,34 +127,32 @@
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
 			<h1 class="mui-title">活动</h1>
-			<a class="mui-pull-right fabu">发布</a>
-			<a class="mui-pull-right yulan">预览</a>
 		</header>
 		<div class="mui-content">
 		    <div class="remind-bar">
 		    	<p>PC端发布更便捷！！www.juruihui.com</p>
 		    </div>
-		    <div class="pic-container">
+		    <div class="pic-container" id="add-poster">
 		    	<img src=""/>
 		    </div>
 			<div class="mui-input-row">
-				<label>活动主题：</label>
-				<input type="text" class="mui-input-clear">
+				<label>活动标题：</label>
+				<input type="text">
 				<hr />
 			</div>
-		    <div class="mui-input-row">
+		    <div class="mui-input-row" id="begintime" data-options='{}'>
 				<label>开始时间：</label>
-				<input type="text" class="mui-input-clear">
+				<input type="text" id="begin">
 				<hr />
 			</div>
-			<div class="mui-input-row">
+			<div class="mui-input-row" data-options='{}' id="endtime">
 				<label>结束时间：</label>
-				<input type="text" class="mui-input-clear">
+				<input type="text" id="end">
 				<hr />
 			</div>
 			<div class="mui-input-row">
 				<label>活动地点：</label>
-				<input type="text" class="mui-input-clear">
+				<input type="text">
 				<hr />
 			</div>
 			<div class="mui-input-row" style="margin: 10px 5px;">
@@ -144,21 +165,203 @@
 			<hr class="line" />
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">活动类型：</a>
+					<a id="huodongleixing">活动主题：<i class="mui-pull-right" id="zhuti"></i></a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">活动费用：</a>
+					<a id="huodongxingshi">活动形式：<i class="mui-pull-right" id="xingshi"></i></a>
 				</li>
 				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">报名设置：</a>
+					<a class="mui-navigate-right" id="huodongfeiyong">活动费用：</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id="baoming-info">报名设置：</a>
 				</li>
 			</ul>
+			<div class="bottom-btn">
+				<a id="preview">预览</a>
+				<a id="publish">发布</a>
+			</div>
 
 		</div>
 		
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.picker.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			
+//			打开报名设置页面
+			document.getElementById('baoming-info').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'baoming-info.html',
+					id:'baoming-info',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+			
+//			打开活动费用页面
+			document.getElementById('huodongfeiyong').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'huodongfeiyong.html',
+					id:'huodongfeiyong',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+			
+//			打开添加海报页面
+			document.getElementById('add-poster').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'add-poster.html',
+					id:'add-poster',
+					show: {
+						aniShow: 'slide-in-right',
+						duration: 300
+					}
+				});
+			});
+			
+			
+			
+			
+//开始时间选择
+			(function($) {
+				$.init();
+				var begin = document.getElementById("begin");
+				var begintime = document.getElementById("begintime");
+					begintime.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+//							born.innerText = rs.text;     //将选择的日期显示在找到的元素节点中
+							begin.value = rs.text;
+							picker.dispose();
+						});
+					}, false);
+			})(mui);
+//结束时间选择
+			(function($) {
+				$.init();
+				var end = document.getElementById("end");
+				var endtime = document.getElementById("endtime");
+					endtime.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+//							born.innerText = rs.text;     //将选择的日期显示在找到的元素节点中
+							end.value = rs.text;
+							picker.dispose();
+						});
+					}, false);
+			})(mui);
+
+//			活动主题
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//普通示例
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: '创业',
+						text: '创业'
+					}, {
+						value: '商务',
+						text: '商务'
+					}, {
+						value: '科技',
+						text: '科技'
+					}, {
+						value: '课程',
+						text: '课程'
+					}, {
+						value: '生活',
+						text: '生活'
+					}, {
+						value: '运动',
+						text: '运动'
+					}, {
+						value: '社交',
+						text: '社交'
+					}, {
+						value: '娱乐',
+						text: '娱乐'
+					}, {
+						value: '亲子',
+						text: '亲子'
+					}, {
+						value: '音乐', 
+						text: '音乐'
+					}, {
+						value: '电影', 
+						text: '电影'
+					}, {
+						value: '公益', 
+						text: '公益'
+					}, {
+						value: '校园', 
+						text: '校园'
+					}]);
+					var xingshiPicker = new $.PopPicker();
+					xingshiPicker.setData([{
+						value: '展览',
+						text: '展览'
+					}, {
+						value: '沙龙',
+						text: '沙龙'
+					}, {
+						value: '会议',
+						text: '会议'
+					}, {
+						value: '培训',
+						text: '培训'
+					}, {
+						value: '演出',
+						text: '演出'
+					}, {
+						value: '派对',
+						text: '派对'
+					}, {
+						value: '户外',
+						text: '户外'
+					}, {
+						value: '盛典',
+						text: '盛典'
+					}, {
+						value: '其他',
+						text: '其他'
+					}]);
+					var huodongleixing = doc.getElementById('huodongleixing');
+					var zhuti = doc.getElementById('zhuti');
+					var huodongxingshi = doc.getElementById('huodongxingshi');
+					var xingshi = doc.getElementById('xingshi');
+					huodongleixing.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							zhuti.innerText = JSON.stringify(items[0].text);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					huodongxingshi.addEventListener('tap', function(event) {
+						xingshiPicker.show(function(items) {
+							xingshi.innerText = JSON.stringify(items[0].text);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+
+			
+			
+			
+			
+			
 		</script>
 	</body>
 

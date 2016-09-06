@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+		/*head*/
+		.mui-bar{
+			background-color: #EB8256;
+		}
+		.mui-bar .mui-title,.mui-bar .mui-btn-link{
+			color: #fff;
+		}
+		/*分享按钮*/
+		#share-btn{
+			display: block;
+			width: 120px;
+			height: 30px;
+			color: #fff;
+			line-height: 30px;
+			background-color: #EB8256;
+			border-radius: 3px;
+			font-size: 14px;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			margin-left: -60px;
+			margin-top: -15px;
+			position: absolute;
+		}
+		#share-btn:active{
+			background-color: #cd724c;
+		}
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>我的
+			</button>
+			<h1 class="mui-title">我的粉丝</h1>
+		</header>
+		<div class="mui-content">
+			<a id="share-btn">分享主页求关注</a>
+		</div>
+		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>
